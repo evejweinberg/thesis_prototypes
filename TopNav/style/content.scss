@@ -1,0 +1,77 @@
+@import "_shared_variables";
+
+.main > * {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.section {
+  // pointer-events: none;
+  // border: 2px dashed red;
+  width: 100vw;
+  // min-height: 200px;
+  margin:  20px 0px;
+  width: 99vw;
+}
+
+.title-div{
+  position: relative;
+  margin: 5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8vw;
+  max-width: 700px;
+  min-width: 200px;
+  border: 2px $red solid;
+  height: 4vw;
+}
+
+.title{
+  text-transform: uppercase;
+  text-align: center;
+  color: $red;
+
+}
+
+.explorable{
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin: 10px;
+  border: 1px $red solid;
+  width: 50vw;
+  min-height: 20vw;
+}
+
+.explorable:hover{
+  cursor: pointer;
+}
+
+.case-study{
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin: 50px 0px;
+  border: 1px $red solid;
+  width: 70vw;
+  height: $case-study-height;
+
+}
+
+.intro{
+  text-align:center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  margin: 40px 0px;
+}
+
+.case-study-before{
+  position: relative;
+  float: left;
+  width: 20vw;
+height: $case-study-height;
+border: 2px black solid;
+}

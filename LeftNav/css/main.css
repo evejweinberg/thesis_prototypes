@@ -1,0 +1,110 @@
+body {
+  transition: filter 1s ease-in-out, background 1s ease-in-out;
+  background: white; }
+
+#sidebar {
+  border: 2px grey solid;
+  background-size: contain;
+  background-image: url("../sketches/sidesection1.jpg");
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  width: 200px;
+  height: 100vh;
+  /*position: absolute;*/
+  /*background: black;*/
+  /*color: white;*/
+  right: -190px;
+  transition: all .6s ease-in-out; }
+
+.nav-section {
+  height: 120px;
+  position: relative; }
+
+#top-nav {
+  border: 2px grey solid;
+  background: #FEFEE5;
+  background-size: 100% 100%;
+  padding: 10px;
+  position: fixed;
+  top: -250px;
+  width: 100vw;
+  height: 200px;
+  /*position: absolute;*/
+  /*background: black;*/
+  /*color: white;*/
+  left: 0px;
+  transition: all .6s ease-in-out; }
+
+#sidebar-bg {
+  background-image: url("../letters/sidebarbg.gif");
+  background-size: 70% 70%;
+  background-repeat: repeat-y;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  width: 200px;
+  height: 100vh;
+  /*position: absolute;*/
+  color: white;
+  right: -190px;
+  transition: all .45s ease-in-out; }
+
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw; }
+
+#main div img {
+  width: 100%;
+  height: auto; }
+
+#hope-after {
+  position: absolute;
+  /*left: 70px;*/
+  /*top: 40vh;*/
+  width: 49vw; }
+
+.splash {
+  background: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../sketches/splash.png");
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh; }
+
+#letter-a {
+  position: absolute;
+  top: 100px;
+  width: 16vw;
+  left: 23vw; }
+
+.title-holder {
+  pointer-events: none;
+  width: 80vw;
+  position: absolute;
+  z-index: 1000;
+  top: 18vw;
+  left: 10vw; }
+
+.animatedDiv {
+  pointer-events: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: 100%;
+  position: relative;
+  width: 100%;
+  height: 13vw;
+  background-image: url(../sketches/captology.png); }
+
+@keyframes play {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -2400px; } }
+
+/*# sourceMappingURL=main.css.map */
