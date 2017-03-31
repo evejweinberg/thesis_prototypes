@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Captology for UX designers</title>
+
+    <link rel="stylesheet" href="css/_shared_variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/lossaversion.css">
+    <link rel="stylesheet" href="css/anxiety.css">
+    <link rel="stylesheet" href="css/buttons.css">
+
+    <!-- <link rel="stylesheet" href="css/sources.css"> -->
+    <link rel="stylesheet" href="semantic/semantic.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+
+      <!-- my json of content -->
+      <script type="text/javascript" src="list.js"></script>
+      <!-- building that content -->
+      <script type="text/javascript" src="js/buildScene.js"></script>
+
+    <!-- <script src="semantic/semantic.js"></script> -->
+
+
+
+  </head>
+  <body>
+
+
+
+<!-- semantic says to put everything in pusher -->
+<div class="flex-parent">
+
+
+  <div class="all">
+
+      <div id="main"></div>
+      <div class="splash" onclick="start()"></div>
+
+      <div class="title-holder">
+        <div class="animatedDiv"></div>
+      </div>
+
+
+
+        <div class='container'>
+            <div class='header'></div>
+            <div class="all-books"></div>
+        </div>
+  </div>
+
+  </div>
+
+
+<!-- menu -->
+<div class="nav-all ui left vertical menu fixed">
+  <!-- ui vertical left labeled menu fixed small sidebar -->
+    <div class="header link item" onclick="scrollTo(captology)">Intro</div>
+  <div class="item">
+    <!-- <div class="header link item">Emotions</div> -->
+    <div class="menu">
+      <a class="item link" onclick="scrollTo(hope)">Hope</a>
+      <a class="item link" onclick="scrollTo(anxiety)">Anxiety</a>
+      <a class="item link" onclick="scrollTo(fear)">Fear</a>
+    </div>
+  </div>
+  <div class="item">
+    <!-- <div class="header link item">Psychology</div> -->
+    <div class="menu">
+      <a class="item link" onclick="scrollTo(transparency)">Transparency</a>
+      <a class="item link" onclick="scrollTo(loss)">Loss Aversion</a>
+      <a class="item link" onclick="scrollTo(dark)">Dark Patterns</a>
+      <a class="item link" onclick="scrollTo(social)">Social Pressure</a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="header link" onclick="scrollTo(fogg)">Fogg</div>
+    <div class="menu">
+      <a class="item link" onclick="scrollTo(motivation)">Motivation</a>
+      <a class="item link" onclick="scrollTo(ability)">Ability</a>
+      <a class="item link" onclick="scrollTo(trigger)">Trigger</a>
+    </div>
+  </div>
+  <div class="item">
+    <!-- <div class="header link" onclick="scrollTo(flow)">Flow</div> -->
+    <div class="menu">
+      <a class="item link" onclick="scrollTo(chunking)">Chunking</a>
+      <!-- <a class="item">FAQs</a> -->
+    </div>
+  </div>
+  <div class="item">
+    <!-- <div class="header">Ethics</div> -->
+    <!-- <div class="menu">
+      <div class="nav-rect" id="e"></div>
+      <div class="nav-rect" id="e"></div>
+      <div class="nav-rect" id="e"></div>
+      <div class="nav-rect" id="e"></div>
+    </div> -->
+    <div class="header link" onclick="scrollTo(sources)">Sources</div>
+
+  </div>
+    <div class="item">
+  <div class="header link">About</div>
+</div>
+    <div class="ui category search item">
+      <div class="ui transparent icon input">
+        <input class="prompt" type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+      <div class="dot" id="dot1"></div>
+      <div class="dot" id="dot2"></div>
+      <div class="dot" id="dot3"></div>
+      <div class="dot" id="dot4"></div>
+      <div class="dot" id="dot5"></div>
+      <div class="dot" id="dot6"></div>
+      <div class="dot" id="dot7"></div>
+
+
+
+
+
+
+    <script type="text/javascript" src="content.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="js/intro.js"></script>
+    <script type="text/javascript" src="js/hope.js"></script>
+    <script type="text/javascript" src="js/lossAversion.js"></script>
+    <script type="text/javascript" src="js/anxiety.js"></script>
+    <script type="text/javascript" src="js/transparency.js"></script>
+    <script type="text/javascript" src="js/fear.js"></script>
+
+
+
+    <script type="text/javascript">
+    // $('.sidebar').sidebar('show');
+
+  //   $('.sidebar')
+  // .visibility({
+  //   type   : 'fixed',
+  //   offset : 45 // give some space from top of screen
+  // });
+
+    // $('.menu').click(function(){
+    //   $('.ui.labeled.icon.sidebar').sidebar('toggle');
+    //
+    // })
+
+    // $('.ui.sidebar').click(function(){
+    //   sidebar('toggle');
+    // })
+
+
+    </script>
+    <!-- <script type="text/javascript" src='sourcesnav.js'></script> -->
+
+  </body>
+</html>

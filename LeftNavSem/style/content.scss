@@ -1,0 +1,168 @@
+@import "_shared_variables";
+
+.main > * {
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.section {
+
+position: relative;
+
+padding: 20px 0px;
+margin: 20px 0px 90px 0px;
+width: 79vw;
+
+  padding: 20px 0px;
+ border-radius: 10px;
+  box-shadow:$box-shadow;
+
+}
+
+.title-div{
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  position: relative;
+  border: 2px $red solid;
+
+}
+
+.title{
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $red;
+  display: block;
+  font-size: $med-font !important;
+
+}
+
+
+
+.title-holder{
+    pointer-events: none;
+    // width: 80vw;
+    position: absolute;
+    z-index: 1000;
+    top: 18vw;
+    left: 10vw;
+
+  }
+
+.explorable{
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin: 10px;
+  border: 1px $red solid;
+  width: 80%;
+  min-height: 20vw;
+
+
+}
+
+.explorable:hover{
+  cursor: pointer;
+}
+
+.case-study{
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  margin: 50px 0px;
+  border: 1px $red solid;
+  width: 20vw;
+  height: $case-study-height;
+  overflow: hidden;
+
+}
+
+.intro{
+  text-align:center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  font-size: $med-sm-font;
+  margin: 40px 0px;
+}
+
+.case-study-before{
+  position: relative;
+  float: left;
+  width: 20vw;
+height: $case-study-height;
+border: 2px black solid;
+}
+
+.case-study-after{
+  padding-left: 20px;
+padding-top: 20px;
+padding-right: 20px;
+/*   margin: 20px; */
+overflow: scroll;
+text-align: left;
+
+}
+
+.case-study-open{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+/*   border: 2px red solid; */
+}
+
+.case-study-header{
+  left: 0px;
+  position: absolute;
+  padding: 5px;
+  color: rgb(160,160,160) !important;
+  font-size: $sm-font;
+  text-transform: uppercase;
+
+}
+
+.case_study_company{
+top: 24%;
+  line-height: 37px;
+  position: relative;
+  font-size: $med-sm-font;
+}
+
+.category{
+  color: rgb(160,160,160) !important;
+top: 0px;
+left: 0px;
+padding: 5px;
+text-align: left;
+position: absolute;
+text-transform: uppercase;
+font-size: $sm-font;
+
+}
+
+
+.glitter{
+  background: $red-A;
+}
+
+.glitter:hover{
+  color: white;
+  cursor: url("../img/mouseB.png"), auto !important;
+
+}
+
+.glitter_on{
+  pointer-events: none;
+  background-image: url('../img/sprite.gif');
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  z-index: 500;
+  transition: all .1s;
+  background-size: contain;
+}

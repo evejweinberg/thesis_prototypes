@@ -1,0 +1,23 @@
+
+var variables =
+  {
+    "comments": "turn the top line off when compiling $json-to-sass variables.json _variables.scss",
+    "font-sans": "Helvetica, sans-serif",
+    "pink": "#FFC0CB",
+    "red": "#FF6666",
+    "red-A": "#F48788",
+    "red-B": "#DD5858",
+    "red-shade-light": "salmon",
+    "red-shade-drk": "#FF6767",
+    "tan": "#FEFEE5",
+    "tan_B": "#D6CCA7",
+    "tan-shade-drk":"#f2f0c0",
+    "tan-shade-drk2": "#e6e291",
+    "stripe-width": "2px",
+    "lrg-font": "3em",
+    "med-font": "2.5em",
+    "med_sm_font": "1.7em",
+    "sm-font": ".8em",
+    "xsm-font": ".5em",
+    "xl-font": "11vh"
+  }

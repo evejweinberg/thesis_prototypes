@@ -1,0 +1,128 @@
+
+
+$case-study-height: 200px;
+$black: #010101;
+$grey: "rgb(90,90,90)";
+$light-grey: "rgb(190,190,190)";
+$thin-border: 1px $black solid;
+$default-font: 'Helvetica';
+$default-light: "Helvetica Neue Light";
+$red: #FF6666;
+$red-A: #F48788;
+$red-B: #DD5858;
+$red-shade-light: salmon;
+$red-shade-drk: #FF6767;
+$tan: #FEFEE5;
+$tan-shade-drk:#f2f0c0;
+$tan-shade-drk2: #e6e291;
+$stripe-width: 2px;
+$test: 14;
+$text-margin: 10vw;
+
+$dash-spread: 12;
+
+
+$button-rad: 10px;
+$border-rad: 3px;
+$stroke-weight: 1.5px;
+$box-shadow:.5px 1px 2px 1px rgba(0,0,0,.3);
+$button-shadow: -8px 3px 20px 10px rgba(0,0,0,.2);
+
+$animation-speed: .5s;
+
+
+
+$lrg-font: 3em;
+$med-font: 2.5em;
+$med-sm-font: 1.7em;
+$sm-font: .8em;
+$xsm-font: .5em;
+$xl-font: 11vh;
+
+$send-height: 310px;
+$from-height: 40px;
+
+$gradient-pink-tan: -webkit-linear-gradient(top left, $red 0%,  $tan 100%);
+
+
+body {
+  background-color: $tan;
+  text-align: center;
+  font-family: $default-font;
+  transition: all .4s ease-in-out;
+}
+
+body * {
+  transition: all $animation-speed ease-in-out;
+}
+
+html {
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+
+
+.caps{
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: $med-font;
+}
+
+h2 {
+  font-size: $med-font*.8;
+}
+
+
+.red-button{
+  transition: all .5s ease-in-out;
+  border-radius: $button-rad;
+  background-color: $red;
+  color: $tan;
+  box-shadow: .5px 1px 2px 1px rgba(0,0,0,.3);
+  margin: 0px 20px 10px 20px;
+}
+
+.temp {
+/*   border: 2px dashed green; */
+}
+
+.red-button:hover{
+    cursor: pointer;
+    background-color: $red-B;
+     font-size: $med-sm-font*1.1;
+     transform: scale(1.1);
+
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.inactive-button{
+  font-size: $med-sm-font;
+  border-radius: $button-rad;
+  background-color: $red-A;
+  color: $red-B;
+}
+
+.twenty-vh-spacer{
+  width: 100%;
+  position: relative;
+  height: 20vh;
+}
+
+
+// .scene3, .scene2{
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 300px;
+// }

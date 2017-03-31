@@ -1,0 +1,135 @@
+body {
+  background-color: #FEFEE5;
+  text-align: center;
+  font-family: "Helvetica";
+  transition: all .4s ease-in-out; }
+
+body * {
+  transition: all 0.5s ease-in-out; }
+
+html {
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.caps {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2em; }
+
+.red-button {
+  transition: all .5s ease-in-out;
+  border-radius: 10px;
+  background-color: #FF6666;
+  color: #FEFEE5;
+  box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  margin: 0px 20px 10px 20px; }
+
+.temp {
+  /*   border: 2px dashed green; */ }
+
+.red-button:hover {
+  cursor: pointer;
+  background-color: #DD5858;
+  font-size: 1.87em;
+  transform: scale(1.1); }
+
+.light {
+  font-weight: lighter; }
+
+.inactive-button {
+  font-size: 1.7em;
+  border-radius: 10px;
+  background-color: #F48788;
+  color: #DD5858; }
+
+.twenty-vh-spacer {
+  width: 100%;
+  position: relative;
+  height: 20vh; }
+
+.nav-rect {
+  display: block;
+  float: right;
+  width: 3vh;
+  /*   vertical-align: middle; */
+  margin-right: 20px;
+  margin-bottom: 20px;
+  top: 0px;
+  height: 3vh;
+  border: 2px black solid;
+  position: relative; }
+
+.flex-parent {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+  float: right; }
+
+.nav-section {
+  height: 120px;
+  position: relative;
+  flex-direction: column; }
+
+.testFLex {
+  display: flex;
+  flex-direction: row; }
+
+.testingA {
+  width: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh; }
+
+#left-nav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  border: 2px grey solid;
+  background: #FEFEE5;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 100vh;
+  /*position: absolute;*/
+  /*background: black;*/
+  /*color: white;*/
+  left: 0px;
+  transition: all .6s ease-in-out; }
+
+#nav-words {
+  border: 1px pink solid;
+  width: 5vw;
+  position: absolute;
+  text-orientation: sideways-right;
+  display: flex;
+  left: 0px;
+  top: 200px;
+  flex-direction: column; }
+
+.nav-all {
+  position: fixed;
+  left: 0px;
+  display: inline-block;
+  top: 0px;
+  height: 100vh;
+  width: 14vw !important;
+  border-right: 1px grey solid; }
+
+#nav-words > * {
+  text-orientation: sideways-right;
+  transform: rotateZ(-90deg);
+  margin: 40px; }
+
+/*# sourceMappingURL=nav.css.map */
