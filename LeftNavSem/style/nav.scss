@@ -4,7 +4,6 @@
   display: block;
   float: right;
   width: 3vh;
-/*   vertical-align: middle; */
   margin-right: 20px;
   margin-bottom: 20px;
   top: 0px;
@@ -16,7 +15,7 @@
 .flex-parent{
   display: flex;
   flex-direction: column;
-  width: 84vw;
+  width: 100vw;
   float: right;
 }
 
@@ -31,46 +30,19 @@
   flex-direction: row;
 }
 
-.testingA{
-  width: 200px;
+
+.nav-highlighted{
+  background: $gradient-pink-tan !important;
+  color: $tan !important;
+}
+
+#nav-opener{
   position: absolute;
-  top:0px;
-  left:0px;
-  height: 100vh;
+  top: 0px;
+  right: -40px;
 }
 
 
-#left-nav {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: column;
-   flex-direction: column;
-
-  border: 2px grey solid;
-  background: $tan;
-  padding: 10px;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 200px;
-  height: 100vh;
-  /*position: absolute;*/
-  /*background: black;*/
-  /*color: white;*/
-  left: 0px;
-
-  transition: all .6s ease-in-out; }
-
-  #nav-words{
-    border: 1px pink solid;
-    width: 5vw;
-    position:absolute;
-    text-orientation: sideways-right;
-    display: flex;
-    left: 0px;
-    top: 200px;
-    flex-direction: column;
-  }
 
   .nav-all{
     position:fixed;
@@ -78,6 +50,7 @@
     display: inline-block;
     top: 0px;
     height: 100vh;
+    opacity: 0;
     width: 14vw !important;
     border-right: 1px grey solid;
     // text-align: left;
@@ -87,4 +60,69 @@
         text-orientation: sideways-right;
         transform: rotateZ(-90deg);
         margin: 40px;
+  }
+
+
+
+#boxesHolder{
+    padding: 0;
+margin-left:60px;
+margin-right: 60px;
+/* margin-bottom: 100px; */
+list-style: none;
+
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+
+-webkit-flex-flow: row wrap;
+justify-content: space-around;
+
+  }
+
+ .box-section:hover{
+  }
+
+  .box-section{
+    transition: all 1s ease-in-out;
+    background: $red-B;
+    margin: 10px;
+
+    color: white;
+    font-size: 1em;
+    text-align: center;
+  }
+
+.flex-child-main{
+    justify-content: center;
+    margin-bottom: 150px;
+  }
+
+
+  #down-first{
+    position: absolute;
+    margin: 50px 0px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+  }
+
+
+  #heroBack{
+    flex: 1;
+    top: 50%;
+    position: relative;
+    align-self: center;
+  }
+
+    #heroForward{
+    flex: 1;
+    align-self: center;
+  }
+
+  #heroContentHolder{
+    display: flex;
   }

@@ -35,7 +35,7 @@ var lossAversionExample =
     '  <input type="text" class="textInputField" id="rating"></div>'+
       '  <p class="static-message"></p>'+
       '  <button id="submit">Submit</button>'+
-      '  </div></div><p class="over-it">This form is not working.</p></div>'
+      '  </div></div><p class="over-it"></p></div>'
 
 function resetFrom(){
     // $('#explorable_loss').html();
@@ -44,7 +44,7 @@ function resetFrom(){
     $('.over-it').click(ended);
     $('#done').click(submit);
 }
-var t = $('#explorable_loss')[0].parentElement
+var t = $('#explorable_loss')[0].parentElement;
 // console.log($(t).find('.explorable'))
   $(t).find('.explorable').css({'border': '0px red solid'})
   $('#explorable_loss').html(lossAversionExample);

@@ -1,0 +1,67 @@
+@import "_shared_variables";
+@media (min-width:320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+  .box-section{
+  background: $red-B;
+  width: 60vw;
+  height: 60vw;
+  margin: 10px;
+
+  color: white;
+  font-size: 1em;
+  text-align: center;
+    }
+}
+@media (min-width:481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .box-section{
+  background: $red-B;
+  width: 33vw;
+  height: 33vw;
+  margin: 10px;
+
+  color: white;
+  font-size: 1em;
+  text-align: center;
+    }
+}
+@media (min-width:641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .box-section{
+  background: $red-B;
+  width: 17vw;
+  height: 17vw;
+  margin: 10px;
+
+  color: white;
+  font-size: 1em;
+  text-align: center;
+    }
+
+
+
+}
+@media (min-width:961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .box-section{
+  background: $red-B;
+  width: 12vw;
+  height: 12vw;
+  margin: 10px;
+
+  color: white;
+  font-size: 1em;
+  text-align: center;
+    }
+
+  .flex-child-main {
+        margin-bottom: 150px;
+  }
+}
+@media (min-width:1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .flex-child-main {
+    margin-bottom: 350px;
+  }
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }

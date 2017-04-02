@@ -2,7 +2,7 @@ body {
   background-color: #FEFEE5;
   text-align: center;
   font-family: "Helvetica";
-  transition: all .4s ease-in-out; }
+  /*   transition: all .4s ease-in-out; */ }
 
 body * {
   transition: all 0.5s ease-in-out; }
@@ -110,6 +110,9 @@ body {
   background: #DD5858;
   cursor: url("../img/hand.png"), auto !important; }
 
+.universal-hover:hover {
+  cursor: url("../img/hand.png"), auto !important; }
+
 .animatedDiv {
   pointer-events: none;
   background-repeat: no-repeat;
@@ -120,14 +123,9 @@ body {
   height: 13vw;
   background-image: url(../img/captology.png); }
 
-.title-holder {
-  pointer-events: none;
-  position: absolute;
-  z-index: 1000;
-  top: 18vw;
-  left: 10vw;
-  width: 80%;
-  height: 240px; }
+#main-site-intro {
+  height: 100vh;
+  width: 100vw; }
 
 @keyframes play {
   from {
@@ -136,7 +134,15 @@ body {
     background-position: -2400px; } }
 #intro-video {
   position: relative;
-  max-width: 100%; }
+  width: 70%;
+  min-width: 100px; }
+
+#intro-play {
+  width: 100%;
+  position: relative;
+  /*   left: 50%; */
+  /*   transform: translateX(-50%); */
+  /*   top: 65vh; */ }
 
 .dot {
   width: 4vw;

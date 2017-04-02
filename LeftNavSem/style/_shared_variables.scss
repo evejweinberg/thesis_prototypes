@@ -44,12 +44,11 @@ $from-height: 40px;
 
 $gradient-pink-tan: -webkit-linear-gradient(top left, $red 0%,  $tan 100%);
 
-
 body {
   background-color: $tan;
   text-align: center;
   font-family: $default-font;
-  transition: all .4s ease-in-out;
+/*   transition: all .4s ease-in-out; */
 }
 
 body * {

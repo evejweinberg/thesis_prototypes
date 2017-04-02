@@ -18,12 +18,9 @@
   color: grey;
   text-decoration: underline; }
 
-.container {
-  width: 85vw;
-  /*margin: 0 auto;*/
-  /*left: 0vw;*/
+.sources {
+  /* width: 85vw; */
   bottom: 0px;
-  /*float: left;*/
   position: relative;
 }
 

@@ -135,15 +135,7 @@ var allSections = [
 'rwe_title':'Kickstarter',
 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
 
-},
-
-{
-"title": "Sources",
-'id': 'sources',
-'category': 'sources',
-"Intro": '',
-
-},
+}
 
 
 

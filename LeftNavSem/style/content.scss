@@ -1,20 +1,31 @@
 @import "_shared_variables";
 
-.main > * {
+/* .main > * {
   left: 50%;
   transform: translateX(-50%);
   position: relative;
+} */
+
+#main{
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  top:0px;
+  index: -1000;
 }
+
 .section {
 
 position: relative;
-
 padding: 20px 0px;
 margin: 20px 0px 90px 0px;
 width: 79vw;
+left: 50%;
+transform: translateX(-50%);
 
   padding: 20px 0px;
  border-radius: 10px;
+ border: 1px $black solid;
   box-shadow:$box-shadow;
 
 }
@@ -25,6 +36,7 @@ width: 79vw;
   margin: 5px;
   position: relative;
   border: 2px $red solid;
+/*   background: $gradient-pink-tan; */
 
 }
 
@@ -32,21 +44,27 @@ width: 79vw;
   padding: 10px;
   text-transform: uppercase;
   text-align: center;
-  color: $red;
+  color: $red-A;
   display: block;
   font-size: $med-font !important;
 
 }
 
+#title-subtitle{
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+
 
 
 .title-holder{
+  margin: 30px 0px 60px 0px;
+  position: relative;
     pointer-events: none;
-    // width: 80vw;
-    position: absolute;
+
     z-index: 1000;
-    top: 18vw;
-    left: 10vw;
+
 
   }
 
@@ -144,11 +162,12 @@ font-size: $sm-font;
 
 
 .glitter{
-  background: $red-A;
+  background: $gradient-pink-tan;
+  color: $tan;
 }
 
 .glitter:hover{
-  color: white;
+/*   color: $black; */
   cursor: url("../img/mouseB.png"), auto !important;
 
 }

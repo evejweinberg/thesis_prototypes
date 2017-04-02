@@ -2,7 +2,7 @@ body {
   background-color: #FEFEE5;
   text-align: center;
   font-family: "Helvetica";
-  transition: all .4s ease-in-out; }
+  /*   transition: all .4s ease-in-out; */ }
 
 body * {
   transition: all 0.5s ease-in-out; }
@@ -55,18 +55,28 @@ h2 {
   position: relative;
   height: 20vh; }
 
-.main > * {
+/* .main > * {
   left: 50%;
   transform: translateX(-50%);
-  position: relative; }
+  position: relative;
+} */
+#main {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  index: -1000; }
 
 .section {
   position: relative;
   padding: 20px 0px;
   margin: 20px 0px 90px 0px;
   width: 79vw;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 20px 0px;
   border-radius: 10px;
+  border: 1px #010101 solid;
   box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.3); }
 
 .title-div {
@@ -74,17 +84,26 @@ h2 {
   position: relative;
   margin: 5px;
   position: relative;
-  border: 2px #FF6666 solid; }
+  border: 2px #FF6666 solid;
+  /*   background: $gradient-pink-tan; */ }
 
 .title {
   padding: 10px;
   text-transform: uppercase;
   text-align: center;
-  color: #FF6666;
+  color: #F48788;
   display: block;
   font-size: 2.5em !important; }
 
+#title-subtitle {
+  width: 100%;
+  margin-bottom: 40px; }
 
+.title-holder {
+  margin: 30px 0px 60px 0px;
+  position: relative;
+  pointer-events: none;
+  z-index: 1000; }
 
 .explorable {
   left: 50%;
@@ -163,10 +182,11 @@ h2 {
   font-size: 0.8em; }
 
 .glitter {
-  background: #F48788; }
+  background: -webkit-linear-gradient(top left, #FF6666 0%, #FEFEE5 100%);
+  color: #FEFEE5; }
 
 .glitter:hover {
-  color: white;
+  /*   color: $black; */
   cursor: url("../img/mouseB.png"), auto !important; }
 
 .glitter_on {

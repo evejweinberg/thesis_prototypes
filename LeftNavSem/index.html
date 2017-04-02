@@ -6,13 +6,15 @@
 
     <link rel="stylesheet" href="css/_shared_variables.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/lossaversion.css">
     <link rel="stylesheet" href="css/anxiety.css">
     <link rel="stylesheet" href="css/buttons.css">
 
-    <!-- <link rel="stylesheet" href="css/sources.css"> -->
+    <link rel="stylesheet" href="css/sources.css">
+
     <link rel="stylesheet" href="semantic/semantic.css">
 
 
@@ -39,33 +41,48 @@
   <body>
 
 
-
-<!-- semantic says to put everything in pusher -->
+<!-- this holds everything all the time, except for the left nav -->
 <div class="flex-parent">
 
-
-  <div class="all">
-
-      <div id="main"></div>
-      <div class="splash" onclick="start()"></div>
-
-      <div class="title-holder">
-        <div class="animatedDiv"></div>
-      </div>
+  <div id="main" class="flex-child-main"></div>
 
 
+  <div class="flex-child-main" id="main-site-intro">
+    <div class="title-holder">
+      <div class="animatedDiv"></div>
+    </div>
+  </div>
 
-        <div class='container'>
+  <div id="boxesHolder" class="flex-child-main">
+  </div>
+
+  <div class="flex-child-main" id="heroContentHolder">
+
+
+  </div>
+
+
+
+
+
+
+      <!-- is this for sources? -->
+    <div class='sources flex-child-main'>
             <div class='header'></div>
             <div class="all-books"></div>
         </div>
-  </div>
+
+
+
 
   </div>
 
 
 <!-- menu -->
 <div class="nav-all ui left vertical menu fixed">
+  <a class="item link" id="nav-opener" onclick="openNav()"><i class="search link icon"></i>
+</a>
+
   <!-- ui vertical left labeled menu fixed small sidebar -->
     <div class="header link item" onclick="scrollTo(captology)">Intro</div>
   <div class="item">
@@ -149,30 +166,7 @@
     <script type="text/javascript" src="js/anxiety.js"></script>
     <script type="text/javascript" src="js/transparency.js"></script>
     <script type="text/javascript" src="js/fear.js"></script>
-
-
-
-    <script type="text/javascript">
-    // $('.sidebar').sidebar('show');
-
-  //   $('.sidebar')
-  // .visibility({
-  //   type   : 'fixed',
-  //   offset : 45 // give some space from top of screen
-  // });
-
-    // $('.menu').click(function(){
-    //   $('.ui.labeled.icon.sidebar').sidebar('toggle');
-    //
-    // })
-
-    // $('.ui.sidebar').click(function(){
-    //   sidebar('toggle');
-    // })
-
-
-    </script>
-    <!-- <script type="text/javascript" src='sourcesnav.js'></script> -->
+    <script type="text/javascript" src='js/sourcesnav.js'></script>
 
   </body>
 </html>

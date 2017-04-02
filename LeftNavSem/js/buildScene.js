@@ -1,12 +1,6 @@
-// console.log(allSections);
+
 function BuildScene(){
 var n = 0;
-var glitterize = []
-
-var glitterTemp = document.createElement('div')
-$(glitterTemp).addClass('glitter_on');
-$("#main").append(glitterTemp);
-
 
   allSections.forEach(section => {
     // console.log(section.id);
@@ -45,8 +39,6 @@ $("#main").append(glitterTemp);
       $(button).text(section.buttonA);
       $(this_section).append(button);
     }
-
-
 
 
     var this_explorable = document.createElement('div');
@@ -100,5 +92,96 @@ function addExtras(){
   $(explorable_meta).addClass('explorable_meta_closed exmet');
   var child = document.getElementById('transparency');
   child.parentNode.insertBefore(explorable_meta,child);
+
+}
+
+function BuildIntro(){
+  var subtitle = document.createElement('div');
+  $(subtitle).attr('id', 'title-subtitle');
+  $(subtitle).html('Computers As Persuasive Tools <br> + Motion Graphics')
+  $("#main-site-intro").append(subtitle);
+
+  $('#main-site-intro').append(
+  "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
+  "<i class='video play big outline icon' id='intro-play'></i>"
+)
+
+$('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
+
+  var introplaying = false;
+
+  $('#intro-play').click(function(){
+    if (introplaying){
+      // console.log(this)
+      $(this).attr('class', "video play outline icon")
+      $('#intro-video')[0].pause();
+      //stop video
+      introplaying = false;
+    } else {
+      // console.log(this)
+      $('#intro-video')[0].play();
+      $(this).attr('class',"stop circle outline icon")
+      //stop video
+      introplaying = true;
+
+    }
+  })
+
+
+
+}
+
+function BuildBoxes(){
+
+  allSections.forEach(section => {
+    if (section.id != 'captology'){
+    var this_section = document.createElement('div');
+    $(this_section).attr('id', 'box_'+section.id);
+    $(this_section).addClass('box-section universal-hover');
+    }
+
+    var this_title_div = document.createElement('div');
+    $(this_title_div).addClass('box-title-div');
+    var this_title = document.createElement('p');
+    $(this_title).addClass('box-title');
+    $(this_title).text(section.title)
+    $(this_title_div).append(this_title);
+    $(this_section).append(this_title_div);
+
+
+    if (section.gif){
+      var gif = document.createElement('img');
+      $(gif).addClass('box-gif_'+ section.id)
+      $(this_section).append(gif);
+    }
+
+    //add the whole thing to the page
+    $('#boxesHolder').append(this_section);
+  })
+
+  $('.box-section').click(function(event){
+    var replaceMe, findMe, findMeId;
+    allSections.forEach(section => {
+      if (section.title == $(this).text()){
+        findMe = section.id;
+        findMeId = "#"+findMe+""
+        replaceMe = $('.flex-child-main').find(findMeId.toString());
+      }
+    })
+    scrollTo(heroContentHolder)
+    $('#heroContentHolder .heroCenter').empty();
+    $('#heroContentHolder .heroCenter').append(replaceMe);
+  })
+
+
+}
+
+
+function BuildHeroDiv(){
+  var herocenter = document.createElement('div');
+  $(herocenter).addClass('heroCenter');
+  $('#heroContentHolder').append("<i class='arrow big left icon universal-hover' id='heroBack'></i>");
+  $('#heroContentHolder').append(herocenter);
+  $('#heroContentHolder').append("<i class='arrow big right icon universal-hover' id='heroForward'></i>");
 
 }

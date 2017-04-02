@@ -1,27 +1,55 @@
 // $(function() {
 var section = 1;
+$('.nav-all').css('left','-130px');
+$('#nav-opener').css('opacity','1');
 
+
+function openNav(){
+  $('.nav-all').css('left','0px');
+  $('#nav-opener').css('opacity','0');
+}
 
 function start(){
 
-  $('.splash').fadeOut();
-  $('.splash').remove();
-  $('.title-holder').remove();
-    enableScroll();
+  scrollTo(boxesHolder)
+
+
+  // $('.nav-all').css('left','0px');
+  // $('.nav-all').css('opacity','1');
 
 
 }
 
-// enableScroll();
+//build everythngi
+BuildIntro();
+BuildHeroDiv();
+BuildBoxes();
 BuildScene();
 addExtras();
 
+// enableScroll();
+
+
 function scrollTo(thing){
+
+
 
   $('html, body').animate({
             scrollTop: $(thing).offset().top -30+ 'px'
         }, 1000);
         return true;
+}
+
+
+$(".nav-all .link").click(function(evt){
+   test.bind($(this))();
+});
+function test()
+{
+   var $this = $(this);
+   console.log($this)
+   $('.nav-all .item').removeClass('nav-highlighted');
+   $($this).addClass('nav-highlighted');
 }
 
 
@@ -46,22 +74,22 @@ $(".splash").mousemove(function(e){
 })
 
 //hope
-$('#3 img').click(function(){
-if (this.src.indexOf('3b.jpg') >= 0){
-this.src = "sketches/3.jpg"
-} else {
-this.src = "sketches/3b.jpg"
-}
-})
-
-
-$('#12 img').click(function(){
-  if (this.src.indexOf('b.jpg') >= 0){
-  this.src = "sketches/12.jpg"
-  } else {
-  this.src = "sketches/12b.jpg"
-  }
-})
+// $('#3 img').click(function(){
+// if (this.src.indexOf('3b.jpg') >= 0){
+// this.src = "sketches/3.jpg"
+// } else {
+// this.src = "sketches/3b.jpg"
+// }
+// })
+//
+//
+// $('#12 img').click(function(){
+//   if (this.src.indexOf('b.jpg') >= 0){
+//   this.src = "sketches/12.jpg"
+//   } else {
+//   this.src = "sketches/12b.jpg"
+//   }
+// })
 
 
 window.addEventListener('scroll', debounce(checkSlide));
@@ -116,6 +144,7 @@ const darkTop = darkpattern.offsetTop-120;
 
 }
 
+//why is this firing twice?
 $('.link').click(function(){
   $('body').css({	"filter": ""})
   $('body').css({	"background": ""})
@@ -131,8 +160,6 @@ $('.link').click(function(){
     console.log('other thing clicked')
     $('body').css({	"filter": "invert(0%)"})
     $('body').css({	"background": "white"})
-
-
   }
 })
 
@@ -183,15 +210,7 @@ $(document).ready(
       // disableScroll();
     }
 })
-var allRects = [];
-// $('.nav-rect').each(function(){
-//   allRects.push(this)
-// })
-//
-// $('.explorable').click(function(){
-//   var index = this.id.charAt(0)
-//   $(allRects[index]).css({'background':'black'});
-// })
+
 
 
 $('.case-study-open').click(function(){

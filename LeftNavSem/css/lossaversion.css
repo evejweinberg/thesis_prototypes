@@ -4,12 +4,13 @@
   font-weight: normal;
   font-style: normal; }
 .loss-aversion-container {
-  width: 50vw;
-  height: 28vw;
+  /* width: 50vw; */
+  display: block;
+  padding: 15px;
+  /* height: 28vw; */
   margin: 0 auto 40px;
   perspective: 600px;
-  transition: all .5s ease-in-out;
-  font-family: 'Creta'; }
+  transition: all .5s ease-in-out; }
 
 .loss-aversion-box {
   border: 1px solid #CCC;

@@ -5,6 +5,15 @@ var spine_right = "-4.5vw";
 var spine_left = "10vw";
 
 
+var sourcesDiv = document.createElement('div');
+$(sourcesDiv).addClass('title-div');
+var sourceTitleP = document.createElement('p');
+$(sourceTitleP).addClass('title');
+$(sourceTitleP).text('Sources')
+$(sourcesDiv).append(sourceTitleP);
+$('.sources .header').append(sourcesDiv);
+
+
 
 allBooks.forEach(function(e, num){
   var center = Math.round(allBooks.length/2)
@@ -25,7 +34,7 @@ allBooks.forEach(function(e, num){
   $(book).attr('id', e.position);
   $(book_deets).addClass('book-description')
   $(spine).addClass('spine')
-  $(book_3D).append(spine)
+  // $(book_3D).append(spine)
   $(book_3D).append(book_cover)
   $(book).append(book_3D);
   $(book).append(book_deets)
@@ -38,7 +47,7 @@ allBooks.forEach(function(e, num){
       'transform': 'rotateY(0deg) scale(1)'
     })
     // $(book).find('.spine').remove();
-    $(book).find('.spine').attr('class', 'spine');
+    // $(book).find('.spine').attr('class', 'spine');
 
 
 
@@ -47,28 +56,28 @@ allBooks.forEach(function(e, num){
     $(book).children('.book-3D').css({
       'transform': 'rotateY('+closeDeg+'deg) scale(1)'
     })
-    $(book).find('.spine').attr('class','spine spine-left');
+    // $(book).find('.spine').attr('class','spine spine-left');
 
   } else if (index == center+1){
     $(book).addClass("flex-item-2");
     $(book).children('.book-3D').css({
       'transform': 'rotateY(-'+closeDeg+'deg) scale(1)'
     })
-    $(book).find('.spine').attr('class','spine spine-right');
+    // $(book).find('.spine').attr('class','spine spine-right');
 
   } else if (index < center+1) {
     $(book).addClass("flex-item-1");
     $(book).children('.book-3D').css({
       'transform': 'rotateY('+farDeg+'deg) scale(1)'
     })
-    $(book).find('.spine').attr('class','spine spine-far-left');
+    // $(book).find('.spine').attr('class','spine spine-far-left');
 
   } else if (index > center+1) {
     $(book).addClass("flex-item-1");
     $(book).children('.book-3D').css({
       'transform': 'rotateY(-'+farDeg+'deg) scale(1)'
     })
-    $(book).find('.spine').attr('class','spine spine-far-right');
+    // $(book).find('.spine').attr('class','spine spine-far-right');
 
   }
 
@@ -100,7 +109,7 @@ function recenterBooks(book){
         'transform': 'rotateY(0deg) scale(1)'
       })
       //it's hero so no spine
-      $(this).find('.spine').attr('class', 'spine');
+      // $(this).find('.spine').attr('class', 'spine');
       //make it the hero width
       $(this).addClass('book flex-item-4')
 
@@ -116,7 +125,7 @@ function recenterBooks(book){
   $('.all-books .book:nth-child('+(hero)+') > .book-3D').css({
     'transform': 'rotateY('+closeDeg+'deg) scale(.9)'
   });
-  $('.all-books .book:nth-child('+(hero)+') > .book-3D > .spine').attr('class', 'spine spine-left');
+  // $('.all-books .book:nth-child('+(hero)+') > .book-3D > .spine').attr('class', 'spine spine-left');
 
 
 //one right of hero
@@ -124,7 +133,7 @@ function recenterBooks(book){
   $('.all-books .book:nth-child('+(hero+2)+') > .book-3D').css({
     'transform': 'rotateY(-'+closeDeg+'deg) scale(.9)'
   });
-  $('.all-books .book:nth-child('+(hero+2)+') > .book-3D > .spine').attr('class', 'spine spine-right');
+  // $('.all-books .book:nth-child('+(hero+2)+') > .book-3D > .spine').attr('class', 'spine spine-right');
 
 
 
@@ -133,12 +142,12 @@ function recenterBooks(book){
   $('.all-books .book:nth-child(n+'+(hero+3)+') > .book-3D').css({
     'transform': 'rotateY(-'+farDeg+'deg) scale(.85)'
   });
-  $('.all-books .book:nth-child(n+'+(hero+3)+') > .book-3D > .spine').attr('class', 'spine spine-far-right');
+  // $('.all-books .book:nth-child(n+'+(hero+3)+') > .book-3D > .spine').attr('class', 'spine spine-far-right');
 
   //far righ tof hero
   $('.all-books .book:nth-child(-n+'+(hero-1)+') > .book-3D').css({
     'transform': 'rotateY('+farDeg+'deg) scale(.85)'
   });
-  $('.all-books .book:nth-child(-n+'+(hero-1)+') > .book-3D > .spine').attr('class', 'spine spine-far-left');
+  // $('.all-books .book:nth-child(-n+'+(hero-1)+') > .book-3D > .spine').attr('class', 'spine spine-far-left');
 
 }

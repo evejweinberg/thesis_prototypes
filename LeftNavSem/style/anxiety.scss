@@ -38,7 +38,7 @@ display: inline-block;
 
 
 .needleC{
-transition: all .3s ease-in;
+transition: all .3s ease-in alternate;
   transform: translateZ(50deg);
 transform-origin: bottom left;
   /*background-color: black;*/
@@ -53,7 +53,7 @@ transform-origin: bottom left;
 }
 
 #needleCinner{
-  transition: all .3s ease-in;
+  transition: all .3s ease-in alternate;
 transform-origin: bottom left;
   background-color: black;
   width: 100%;
@@ -61,6 +61,33 @@ transform-origin: bottom left;
   position:relative;
   border-radius: 3px;
 
+}
+
+.needleAlso{
+  -webkit-mask: url(../img/gage.png) top left / contain no-repeat;
+  mask: url(../img/gage.png) top left / contain no-repeat;
+
+
+}
+
+#needleWide{
+  transition: all .3s ease-in;
+transform-origin: 0% 70%;
+  background-color: red;
+  width: 3000%;
+  top: -200px;
+  height: 400px;
+  position:relative;
+  border-radius: 3px;
+
+}
+
+.mask-top {
+    position: absolute;
+    background-image: url(../img/gage.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  
 }
 
 
@@ -116,9 +143,11 @@ svg {
 }
 
 #gage-png{
-  position: absolute;
-width: 100%;
-top: 50px;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .outline {

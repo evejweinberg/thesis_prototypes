@@ -66,6 +66,11 @@ position: relative;
   cursor: url("../img/hand.png"), auto !important;
 }
 
+.universal-hover:hover{
+    cursor: url("../img/hand.png"), auto !important;
+
+}
+
 .animatedDiv {
     pointer-events: none;
     background-repeat: no-repeat;
@@ -77,15 +82,13 @@ position: relative;
   background-image: url(../img/captology.png);
 }
 
-.title-holder {
-  pointer-events: none;
-  position: absolute;
-  z-index: 1000;
-  top: 18vw;
-  left: 10vw;
-  width: 80%;
-  height: 240px;
+#main-site-intro{
+  height: 100vh;
+  width: 100vw;
 }
+
+
+
 
 
   @keyframes play {
@@ -95,8 +98,17 @@ from { background-position:    0px; }
 
 #intro-video{
   position: relative;
+  width: 70%;
 
-  max-width:100%;
+  min-width:100px;
+}
+
+#intro-play{
+  width: 100%;
+  position:relative;
+/*   left: 50%; */
+/*   transform: translateX(-50%); */
+/*   top: 65vh; */
 }
 
 
