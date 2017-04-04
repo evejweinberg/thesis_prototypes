@@ -38,6 +38,15 @@ var n = 0;
       $(button).addClass('c-button button_'+ section.id)
       $(button).text(section.buttonA);
       $(this_section).append(button);
+      $(button).click(function(){
+        if ($(button).text() == section.buttonA){
+          $(button).text(section.buttonB);
+          checkInner(section.id)
+        } else {
+          checkInner(section.id)
+          $(button).text(section.buttonA);
+        }
+      })
     }
 
 
@@ -96,15 +105,20 @@ function addExtras(){
 }
 
 function BuildIntro(){
-  var subtitle = document.createElement('div');
-  $(subtitle).attr('id', 'title-subtitle');
-  $(subtitle).html('Computers As Persuasive Tools <br> + Motion Graphics')
-  $("#main-site-intro").append(subtitle);
+  var showVideo = false;
+  // var subtitle = document.createElement('div');
+  // $(subtitle).attr('id', 'title-subtitle');
+  // $(subtitle).html('Computers As Persuasive Tools <br> + Motion Graphics')
+  // $("#main-site-intro").append(subtitle);
+
+if (showVideo){
+
 
   $('#main-site-intro').append(
   "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
-  "<i class='video play big outline icon' id='intro-play'></i>"
-)
+  "<i class='video play big outline icon' id='intro-play'></i>")
+
+  }
 
 $('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
 
@@ -180,6 +194,7 @@ function BuildBoxes(){
 function BuildHeroDiv(){
   var herocenter = document.createElement('div');
   $(herocenter).addClass('heroCenter');
+  $(herocenter).append('<img src="" alt=""><p>placeholder gif goes here. Waiting for you to click a category!</p>');
   $('#heroContentHolder').append("<i class='arrow big left icon universal-hover' id='heroBack'></i>");
   $('#heroContentHolder').append(herocenter);
   $('#heroContentHolder').append("<i class='arrow big right icon universal-hover' id='heroForward'></i>");

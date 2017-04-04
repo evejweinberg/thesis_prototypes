@@ -94,7 +94,7 @@ setInterval(function(){
 
    val += randomNum;
   var newVal = (!isNaN(val) && val >= 0 && val <= 100) ? val : 50;
-  console.log(newVal)
+  // console.log(newVal)
 
 // $('.needleD').css('transform','rotateZ('+(90+(newVal * 1.8) - 180) +'deg)')
 $('.needleC').css('transform','rotateZ('+(90+(newVal * 1.8) - 180) +'deg)')

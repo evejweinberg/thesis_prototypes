@@ -59,6 +59,7 @@ transform: translateX(-50%);
 
 
 .title-holder{
+  mix-blend-mode: multiply;
   margin: 30px 0px 60px 0px;
   position: relative;
     pointer-events: none;
@@ -93,6 +94,13 @@ transform: translateX(-50%);
   width: 20vw;
   height: $case-study-height;
   overflow: hidden;
+  transition: all $animation-speed ease-in-out;
+
+
+}
+
+.case-study > * {
+  transition: all $animation-speed ease-in-out;
 
 }
 

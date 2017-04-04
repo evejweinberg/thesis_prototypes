@@ -4,9 +4,6 @@ body {
   font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
-body * {
-  transition: all 0.5s ease-in-out; }
-
 html {
   margin: 0;
   top: 0px;
@@ -117,10 +114,14 @@ h2 {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: center; }
+
+.box-section:hover {
+  box-shadow: -8px 3px 20px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1); }
 
 .box-section {
-  transition: all 1s ease-in-out;
+  transition: all .4s ease-in-out;
   background: #DD5858;
   margin: 10px;
   color: white;
@@ -129,8 +130,7 @@ h2 {
 
 .flex-child-main {
   justify-content: center;
-  margin-bottom: 150px;
-  }
+  margin-bottom: 150px; }
 
 #down-first {
   position: absolute;

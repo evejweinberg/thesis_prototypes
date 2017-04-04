@@ -10,6 +10,8 @@ var allSections = [
 'id': 'hope',
 'category': 'emotion',
 'something': 'temp',
+'buttonA': 'Add Hope',
+'buttonB': 'Remove Hope',
 "Intro": 'Hope is the strongest positive emotion you can conjure. Animation’s greatest strength is joy, surprise, and delight, so use it to animate the positive effects of a user’s behavior. Emphasize cause and effect. They will feel hope, feel more effective, and want to interact with your product more.',
 'rwe_title':'Kickstarter or Charity Water',
 'rwe_body': '<p>Looking into kickstarter data and charity water.<a href="https://upleaf.com/nonprofit-resources/online-fundraising/case-study-charity-water" target="_blank">Charity</a></p>'
@@ -58,6 +60,8 @@ var allSections = [
 "title": "Loss Aversion",
 'id': 'loss',
 'category': 'psychology',
+'buttonA': 'Use Loss Aversion',
+'buttonB': 'Back to default',
 'something': 'temp',
 "Intro": '<p>Just as in the real world, users remember negative experiences more than positive - even when they are of equal weight. Avoid the pitfalls of bad <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">heuristics </a>and turn a possible loss into a gain. These can be moments to humanize your product and express your brand.',
 'rwe_title':'Stripe Credit Card Payment',
@@ -97,37 +101,48 @@ var allSections = [
 },
 
 {
-"title": "Motivation",
-'id': 'motivation',
-'category': 'fogg',
+"title": "Explorables",
+'id': 'explorableexplanations',
+'category': 'explorable',
 'something': 'temp',
-"Intro": 'Does your user know their motivation for executing their desired behavior? Motivation, if not already present, can be created with education, and strengthened with emotion.',
-'rwe_title':'Kickstarter',
-'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+"Intro": "This whole site utilizes a learning method called 'Explorable explanations'. Users learn faster and more deeply when you let them play, manipulate, and see the effects of their changes.",
+'rwe_title':'Explorables',
+'rwe_body': '<p>This website is full of amazing explorables. Play with them and you can be the judge of how comprehension and retention is affected.</p>'
 
 },
-{
-"title": "Ability",
-'id': 'ability',
-'category': 'fogg',
-'something': 'temp',
-"Intro": 'Is your user aware that they have the specific ability that is required? First define which categories apply to your situation:',
-'rwe_title':'Kickstarter',
-'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
 
-},
+// {
+// "title": "Motivation",
+// 'id': 'motivation',
+// 'category': 'fogg',
+// 'something': 'temp',
+// "Intro": 'Does your user know their motivation for executing their desired behavior? Motivation, if not already present, can be created with education, and strengthened with emotion.',
+// 'rwe_title':'Kickstarter',
+// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+//
+// },
+// {
+// "title": "Ability",
+// 'id': 'ability',
+// 'category': 'fogg',
+// 'something': 'temp',
+// "Intro": 'Is your user aware that they have the specific ability that is required? First define which categories apply to your situation:',
+// 'rwe_title':'Kickstarter',
+// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+//
+// },
+// {
+// "title": "Trigger",
+// 'id': 'trigger',
+// 'category': 'fogg',
+// 'something': 'temp',
+// "Intro": 'TRIGGERS can cause us to act on impulse. If a user knows their motivation and ability, this is the time to trigger! Triggers can come in different forms: A extra emotional nudge, a reminder, or a facilitator.',
+// 'rwe_title':'Kickstarter',
+// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+//
+// },
 {
-"title": "Trigger",
-'id': 'trigger',
-'category': 'fogg',
-'something': 'temp',
-"Intro": 'TRIGGERS can cause us to act on impulse. If a user knows their motivation and ability, this is the time to trigger! Triggers can come in different forms: A extra emotional nudge, a reminder, or a facilitator.',
-'rwe_title':'Kickstarter',
-'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
-
-},
-{
-"title": "Chunking",
+"title": "Flow",
 'id': 'chunking',
 'category': 'flow',
 'something': 'temp',

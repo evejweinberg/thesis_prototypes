@@ -78,15 +78,17 @@ display: -webkit-flex;
 display: flex;
 
 -webkit-flex-flow: row wrap;
-justify-content: space-around;
+justify-content: center;
 
   }
 
  .box-section:hover{
+   box-shadow: $button-shadow;
+   transform: scale(1.1);
   }
 
   .box-section{
-    transition: all 1s ease-in-out;
+    transition: all .4s ease-in-out;
     background: $red-B;
     margin: 10px;
 

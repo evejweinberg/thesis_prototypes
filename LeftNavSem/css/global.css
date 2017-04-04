@@ -4,9 +4,6 @@ body {
   font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
-body * {
-  transition: all 0.5s ease-in-out; }
-
 html {
   margin: 0;
   top: 0px;
@@ -86,6 +83,7 @@ body {
   position: relative; }
 
 .c-button {
+  transition: all 0.5s ease-in-out;
   position: absolute;
   display: block;
   box-shadow: -8px 3px 20px 10px rgba(0, 0, 0, 0.2);
@@ -116,16 +114,17 @@ body {
 .animatedDiv {
   pointer-events: none;
   background-repeat: no-repeat;
-  display: inline-block;
-  background-size: 100%;
+  display: block;
   position: relative;
-  width: 100%;
-  height: 13vw;
+  width: 1200px;
+  height: 240px;
   background-image: url(../img/captology.png); }
 
 #main-site-intro {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  background-image: url(../img/bg1.png);
+  background-size: 100%; }
 
 @keyframes play {
   from {
@@ -145,13 +144,20 @@ body {
   /*   top: 65vh; */ }
 
 .dot {
-  width: 4vw;
-  height: 4vw;
+  width: 20px;
+  height: 20px;
   background-color: white;
   border-radius: 100%;
   z-index: 50;
   position: absolute;
   margin-top: 10px;
   left: 49%; }
+
+.flip {
+  animation: flip .5s 1 ease-in-out; }
+
+@keyframes flip {
+  50% {
+    transform: scale(0.7) translateX(-85%); } }
 
 /*# sourceMappingURL=global.css.map */

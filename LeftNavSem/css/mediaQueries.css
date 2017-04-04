@@ -4,9 +4,6 @@ body {
   font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
-body * {
-  transition: all 0.5s ease-in-out; }
-
 html {
   margin: 0;
   top: 0px;
@@ -89,8 +86,8 @@ h2 {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .box-section {
     background: #DD5858;
-    width: 12vw;
-    height: 12vw;
+    width: 14vw;
+    height: 14vw;
     margin: 10px;
     color: white;
     font-size: 1em;

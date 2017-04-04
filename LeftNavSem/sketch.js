@@ -63,11 +63,11 @@ possiblePosSprite.push(2400/spritesheetNum *i)
 }
 
 //get mouse X position
-$(".splash").mousemove(function(e){
-  // console.log(e.offsetX)
+$("#main-site-intro").mousemove(function(e){
+  // console.log('hi')
  var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
-  var ratio = $(window).width()*.8*240/1200;
-   var yoffset = Math.round(-1* (ratio)*curIndex)
+  var ratio = 240/1200;
+   var yoffset = Math.round(-1* (240)*curIndex)
    var cons = 'background-position: 0px '+ yoffset + 'px'
    $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
 

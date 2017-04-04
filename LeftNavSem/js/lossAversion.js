@@ -82,7 +82,6 @@ $('#done').click(submit);
 
 //on 'submit' check for errors
 function check(){
-  console.log('check called')
 
 
   var nameVal = $('#name').val();
@@ -147,7 +146,6 @@ function check(){
 
 //shake form
 function shake(){
-  console.log('shKE called')
 
   //if Animation is on, then shake!
   if (AnimationOn){

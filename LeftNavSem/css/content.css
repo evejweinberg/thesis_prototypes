@@ -4,9 +4,6 @@ body {
   font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
-body * {
-  transition: all 0.5s ease-in-out; }
-
 html {
   margin: 0;
   top: 0px;
@@ -100,6 +97,7 @@ h2 {
   margin-bottom: 40px; }
 
 .title-holder {
+  mix-blend-mode: multiply;
   margin: 30px 0px 60px 0px;
   position: relative;
   pointer-events: none;
@@ -112,7 +110,8 @@ h2 {
   margin: 10px;
   border: 1px #FF6666 solid;
   width: 80%;
-  min-height: 20vw; }
+  min-height: 20vw;
+  }
 
 .explorable:hover {
   cursor: pointer; }
@@ -125,7 +124,11 @@ h2 {
   border: 1px #FF6666 solid;
   width: 20vw;
   height: 200px;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 0.5s ease-in-out; }
+
+.case-study > * {
+  transition: all 0.5s ease-in-out; }
 
 .intro {
   text-align: center;
