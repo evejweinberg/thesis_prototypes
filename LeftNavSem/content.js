@@ -8,6 +8,7 @@ var allSections = [
 {
 "title": "Hope",
 'id': 'hope',
+'gif': 'img/box_hope.gif',
 'category': 'emotion',
 'something': 'temp',
 'buttonA': 'Add Hope',
@@ -21,6 +22,7 @@ var allSections = [
 {
 "title": "Anxiety",
 'id': 'anxiety',
+'gif': 'img/box_anxiety.gif',
 'category': 'emotion',
 'something': 'temp',
 "Intro": 'Anxiety is a negative emotion that is easy to trigger. Although easy to implement, it can lead to negative results from smart users and if triggered at certain times can be unethical.',
@@ -32,6 +34,7 @@ var allSections = [
 {
 "title": "Fear",
 'id': 'fear',
+'gif': 'img/box_fear.gif',
 'category': 'emotion',
 'something': 'temp',
 'placeholderImage': "img/scarcity.png",
@@ -46,6 +49,7 @@ var allSections = [
 {
 "title": "Transparency",
 'id': 'transparency',
+'gif': 'img/box_transparency.gif',
 'placeholderImage': "img/dogTemp.png",
 'buttonA': 'Add More Transparency',
 'buttonB': 'Back to default',
@@ -59,6 +63,7 @@ var allSections = [
 {
 "title": "Loss Aversion",
 'id': 'loss',
+'gif': 'img/box_loss.gif',
 'category': 'psychology',
 'buttonA': 'Use Loss Aversion',
 'buttonB': 'Back to default',
@@ -72,6 +77,7 @@ var allSections = [
 {
 "title": "Dark Patterns",
 'id': 'dark',
+'gif': 'img/box_dark.gif',
 'category': 'psychology',
 'something': 'temp',
 "Intro": 'Dark Patterns are immoral and unethical. We will NOT be covering them here.',
@@ -82,8 +88,14 @@ var allSections = [
 {
 "title": "Social Pressure",
 'id': 'social',
+'gif': 'img/box_socialpressure.gif',
 'category': 'psychology',
 'something': 'temp',
+'placeholderImage': "img/sp_00.jpg",
+'buttonA': 'No Pressure',
+'buttonB': 'Add Group Pressure',
+'buttonC': 'Add Friend Pressure',
+'buttonD': 'Add Authority pressure',
 "Intro": 'Social Pressure is a base minimum these days. Explore these examples and see how they make you feel.',
 'rwe_title':'Case Study Needed',
 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
@@ -93,6 +105,7 @@ var allSections = [
 "title": "Fogg's Behavioral Model",
 'id': 'fogg',
 'category': 'fogg',
+'gif': 'img/box_bm.gif',
 'something': 'temp',
 "Intro": 'BJ Fogg’s Behavioral Model states that three elements must exist at the same time in order for your desired user behavior to occur (they can be organic or stimulated from you): MOTIVATION, ABILITY, and the TRIGGER. This is the overarching principle of Captology. Do not waste klout with your users or developer dollars asking for anything unless it is the right time to ask.',
 'rwe_title':'Kickstarter',
@@ -104,10 +117,11 @@ var allSections = [
 "title": "Explorables",
 'id': 'explorableexplanations',
 'category': 'explorable',
+'gif': 'img/box_explorable.gif',
 'something': 'temp',
 "Intro": "This whole site utilizes a learning method called 'Explorable explanations'. Users learn faster and more deeply when you let them play, manipulate, and see the effects of their changes.",
 'rwe_title':'Explorables',
-'rwe_body': '<p>This website is full of amazing explorables. Play with them and you can be the judge of how comprehension and retention is affected.</p>'
+'rwe_body': '<p>This website is full of amazing explorables. Play with them and you can be the judge of how comprehension and retention is affected. Play with this meta-explorable, teaching you the 6 layers of education.</p>'
 
 },
 
@@ -144,6 +158,7 @@ var allSections = [
 {
 "title": "Flow",
 'id': 'chunking',
+'gif': 'img/box_flow.gif',
 'category': 'flow',
 'something': 'temp',
 "Intro": 'CHUNKING is an example of a facilitator. It is just breaking down one desired behavior into steps. This not only reduces cognitive load, but users are more likely to complete things if they know how close to the end they area.',

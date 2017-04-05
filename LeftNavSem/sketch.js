@@ -26,14 +26,12 @@ BuildHeroDiv();
 BuildBoxes();
 BuildScene();
 addExtras();
+createRandomBoxes();
 
 // enableScroll();
 
 
 function scrollTo(thing){
-
-
-
   $('html, body').animate({
             scrollTop: $(thing).offset().top -30+ 'px'
         }, 1000);
@@ -63,13 +61,14 @@ possiblePosSprite.push(2400/spritesheetNum *i)
 }
 
 //get mouse X position
-$("#main-site-intro").mousemove(function(e){
-  // console.log('hi')
+$(".flex-parent").mousemove(function(e){
+  console.log(e.offsetY)
  var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
   var ratio = 240/1200;
    var yoffset = Math.round(-1* (240)*curIndex)
    var cons = 'background-position: 0px '+ yoffset + 'px'
    $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
+   $(".randomBoxes").css('transform', 'translateY('+e.offsetY*.9+'px) rotateZ('+yoffset/80+'deg)')
 
 })
 

@@ -98,7 +98,7 @@ h2 {
 
 .title-holder {
   mix-blend-mode: multiply;
-  margin: 30px 0px 60px 0px;
+  margin: 90px 0px 60px 0px;
   position: relative;
   pointer-events: none;
   z-index: 1000; }
@@ -108,10 +108,9 @@ h2 {
   transform: translateX(-50%);
   position: relative;
   margin: 10px;
-  border: 1px #FF6666 solid;
+  /*   border: 1px $red solid; */
   width: 80%;
-  min-height: 20vw;
-  }
+  min-height: 20vw; }
 
 .explorable:hover {
   cursor: pointer; }

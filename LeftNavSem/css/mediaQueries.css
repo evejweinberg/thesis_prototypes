@@ -52,40 +52,69 @@ h2 {
   position: relative;
   height: 20vh; }
 
+#intro-square {
+  pointer-events: none; }
+
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
   .box-section {
-    background: #DD5858;
     width: 60vw;
     height: 60vw;
     margin: 10px;
     color: white;
     font-size: 1em;
-    text-align: center; } }
+    text-align: center; }
+
+  #intro-square {
+    position: absolute;
+    width: 60vw;
+    height: 50vw;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   .box-section {
-    background: #DD5858;
     width: 33vw;
     height: 33vw;
     margin: 10px;
     color: white;
     font-size: 1em;
-    text-align: center; } }
+    text-align: center; }
+
+  #intro-square {
+    position: absolute;
+    width: 60vw;
+    height: 50vw;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
   .box-section {
-    background: #DD5858;
     width: 17vw;
     height: 17vw;
     margin: 10px;
     color: white;
     font-size: 1em;
-    text-align: center; } }
+    text-align: center; }
+
+  #intro-square {
+    position: absolute;
+    width: 40vw;
+    height: 30vw;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .box-section {
-    background: #DD5858;
     width: 14vw;
     height: 14vw;
     margin: 10px;
@@ -93,12 +122,32 @@ h2 {
     font-size: 1em;
     text-align: center; }
 
+  #intro-square {
+    position: absolute;
+    width: 35vw;
+    height: 30vw;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); }
+
   .flex-child-main {
     margin-bottom: 150px; } }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
   .flex-child-main {
-    margin-bottom: 350px; } }
+    margin-bottom: 350px; }
+
+  #intro-square {
+    position: absolute;
+    width: 30vw;
+    height: 25vw;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 1281px) {
   /* hi-res laptops and desktops */ }
 

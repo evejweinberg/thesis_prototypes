@@ -1,0 +1,11 @@
+#spbuttonholder {
+  display: flex;
+  /*     border: 4px red solid; */ }
+
+#spbuttonholder > * {
+  flex: 1;
+  margin: 8px;
+  position: relative;
+  display: inline-block; }
+
+/*# sourceMappingURL=sp.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAoBA,eAAe;EACX,OAAO,EAAE,IAAI;EACjB,gCAAgC;;AAGhC,mBAAoB;EAChB,IAAI,EAAE,CAAC;EACP,MAAM,EAAE,GAAG;EACV,QAAQ,EAAE,QAAQ;EACvB,OAAO,EAAE,YAAY",
+"sources": ["../style/sp.scss"],
+"names": [],
+"file": "sp.css"
+}

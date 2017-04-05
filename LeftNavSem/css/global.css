@@ -67,17 +67,6 @@ body {
   /*top: 40vh;*/
   width: 49vw; }
 
-.splash {
-  background: white;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../img/splash.png");
-  top: 0px;
-  left: 0px;
-  position: absolute;
-  width: 100vw;
-  height: 100vh; }
-
 .placeholder-image {
   width: 100%;
   position: relative; }
@@ -112,19 +101,22 @@ body {
   cursor: url("../img/hand.png"), auto !important; }
 
 .animatedDiv {
+  transform-origin: 0% 50%;
+  z-index: 300;
   pointer-events: none;
   background-repeat: no-repeat;
   display: block;
   position: relative;
   width: 1200px;
   height: 240px;
+  left: 39%;
+  transform: scale(0.64) translateX(-35%);
   background-image: url(../img/captology.png); }
 
 #main-site-intro {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/bg1.png);
-  background-size: 100%; }
+  background-size: cover; }
 
 @keyframes play {
   from {
@@ -138,10 +130,16 @@ body {
 
 #intro-play {
   width: 100%;
-  position: relative;
-  /*   left: 50%; */
-  /*   transform: translateX(-50%); */
-  /*   top: 65vh; */ }
+  position: relative; }
+
+#and-motion {
+  font-size: 4.3em;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%); }
 
 .dot {
   width: 20px;
@@ -159,5 +157,8 @@ body {
 @keyframes flip {
   50% {
     transform: scale(0.7) translateX(-85%); } }
+.randomBoxes {
+  position: absolute;
+  z-index: -10; }
 
 /*# sourceMappingURL=global.css.map */

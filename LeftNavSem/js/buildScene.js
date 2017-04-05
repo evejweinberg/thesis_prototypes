@@ -1,3 +1,6 @@
+var cols = ['#00FBD0', '#3FA9F5', '#FF404B', '#0000FF', '#22B573','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
+'-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0']
+
 
 function BuildScene(){
 var n = 0;
@@ -37,16 +40,42 @@ var n = 0;
       var button = document.createElement('div');
       $(button).addClass('c-button button_'+ section.id)
       $(button).text(section.buttonA);
-      $(this_section).append(button);
-      $(button).click(function(){
-        if ($(button).text() == section.buttonA){
-          $(button).text(section.buttonB);
-          checkInner(section.id)
-        } else {
-          checkInner(section.id)
-          $(button).text(section.buttonA);
-        }
-      })
+
+      if (section.id == 'social'){
+        var button2 = $(button).clone();
+        var button3 = $(button).clone();
+        var button4 = $(button).clone();
+        $(button).attr('id','spbutton1');
+        $(button2).attr('id','spbutton2');
+        $(button3).attr('id','spbutton3');
+        $(button4).attr('id','spbutton4');
+        $(button2).text(section.buttonB);
+        $(button3).text(section.buttonC);
+        $(button4).text(section.buttonD);
+        var spbuttonHolder = document.createElement('div');
+        $(spbuttonHolder).attr('id','spbuttonholder');
+        $(spbuttonHolder).append(button);
+
+        $(spbuttonHolder).append(button2);
+        $(spbuttonHolder).append(button3);
+        $(spbuttonHolder).append(button4);
+        $(this_section).append(spbuttonHolder);
+
+
+      } else {
+
+        $(this_section).append(button);
+        $(button).click(function(){
+            if ($(button).text() == section.buttonA){
+              $(button).text(section.buttonB);
+              checkInner(section.id)
+            } else {
+              checkInner(section.id)
+              $(button).text(section.buttonA);
+            }
+          })
+
+      }
     }
 
 
@@ -112,13 +141,14 @@ function BuildIntro(){
   // $("#main-site-intro").append(subtitle);
 
 if (showVideo){
-
-
-  $('#main-site-intro').append(
-  "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
-  "<i class='video play big outline icon' id='intro-play'></i>")
-
+    $('#main-site-intro').append(
+    "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
+    "<i class='video play big outline icon' id='intro-play'></i>")
   }
+
+$('#main-site-intro').append(
+  "<div id='intro-square' </div><p id='and-motion'>+ Motion Graphics</p>")
+
 
 $('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
 
@@ -158,15 +188,18 @@ function BuildBoxes(){
     $(this_title_div).addClass('box-title-div');
     var this_title = document.createElement('p');
     $(this_title).addClass('box-title');
-    $(this_title).text(section.title)
+    $(this_title).text(section.title);
+    $(this_title).css('opacity','0');
     $(this_title_div).append(this_title);
     $(this_section).append(this_title_div);
-
 
     if (section.gif){
       var gif = document.createElement('img');
       $(gif).addClass('box-gif_'+ section.id)
-      $(this_section).append(gif);
+      // $(this_section).append(gif);
+      $(this_section).css('background-image','url('+section.gif+')')
+      $(this_section).css('background-size','cover')
+
     }
 
     //add the whole thing to the page
@@ -199,4 +232,67 @@ function BuildHeroDiv(){
   $('#heroContentHolder').append(herocenter);
   $('#heroContentHolder').append("<i class='arrow big right icon universal-hover' id='heroForward'></i>");
 
+}
+
+
+
+function checkInner(sectionId){
+  console.log('checking '+ sectionId)
+  if (sectionId == 'loss'){
+    console.log('LOSS');
+
+      $('#explorable_loss').addClass('flip');
+      setTimeout(function(){
+        $('#explorable_loss').removeClass('flip');
+      },1010);
+
+      if(AnimationOn == false){
+        AnimationOn = true;
+        resetFrom();
+      } else {
+        AnimationOn = false;
+        resetFrom();
+      }
+    };
+
+  var tempbb = $('#explorable_transparency').find('video')[0]
+  if (tempbb.src.includes('before')){
+    $('#explorable_transparency').addClass('flip');
+    setTimeout(function(){
+      $('#explorable_transparency').removeClass('flip');
+    },1010);
+    $('#explorable_transparency').empty();
+    $('#explorable_transparency').append(
+    '<video src="img/okc_after.mp4" autoplay loop class="placeholder-image"></video>')
+  } else {
+    $('#explorable_transparency').addClass('flip');
+    setTimeout(function(){
+      $('#explorable_transparency').removeClass('flip');
+    },1010);
+    $('#explorable_transparency').empty();
+    $('#explorable_transparency').append(
+    '<video src="img/okc_before.mp4" autoplay loop class="placeholder-image"></video>')
+  }
+
+}
+
+
+function createRandomBoxes(){
+
+  for (var i =0; i < 50; i ++){
+    var random = Math.random()*(40-10)+10;
+    var maxWidth = 1400;
+    var temp = document.createElement('div');
+    $(temp).addClass('randomBoxes');
+    $(temp).css('background', cols[i%cols.length]);
+    $(temp).css({
+    'top': Math.random()*maxWidth + 'px',
+    'left':Math.random()*maxWidth + 'px',
+    'border-radius': Math.round(Math.random()*30),
+    'width': Math.round(random),
+    'height': Math.round(random)
+  });
+
+    $('#main-site-intro').append(temp);
+  }
 }

@@ -1,18 +1,3 @@
-#button_loss {
-  background-image: url(../img/button_loss.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 10vw;
-  min-width: 140px;
-  height: 200px;
-  /* border: 2px blue solid; */
-  position: absolute;
-  float: left;
-  top: 45%;
-  right: 20px;
-  transition: all .5s;
-  animation: scaleBounce .5s 1 ease-in; }
-
 .button_transparency {
   right: 0px;
   top: 35%; }
@@ -24,10 +9,6 @@
 #button_fear_A {
   left: 17%;
   top: 68%; }
-
-#button_loss:hover {
-  cursor: url(../img/mouseB.png);
-  background-image: url(../img/button_loss_hover.png); }
 
 @keyframes scaleBounce {
   40% {

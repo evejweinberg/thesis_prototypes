@@ -1,0 +1,31 @@
+#spbutton1{
+
+
+
+}
+
+#spbutton2{
+
+
+}
+
+#spbutton3{
+
+
+}
+
+#spbutton4{
+
+}
+
+#spbuttonholder{
+    display: flex;
+/*     border: 4px red solid; */
+}
+
+#spbuttonholder > * {
+    flex: 1;
+    margin: 8px;
+     position: relative;
+display: inline-block;
+}

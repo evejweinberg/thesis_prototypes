@@ -5,29 +5,7 @@ $('#explorable_transparency').empty();
 $('#explorable_transparency').append(
 '<video src="img/okc_before.mp4" autoplay loop class="placeholder-image"></video>')
 
-function checkInner(sectionId){
-  // console.log('checking '+ sectionId)
-  var tempbb = $('#explorable_transparency').find('video')[0]
-  console.log(tempbb.src)
-  if (tempbb.src.includes('before')){
-    $('#explorable_transparency').addClass('flip');
-    setTimeout(function(){
-      $('#explorable_transparency').removeClass('flip');
-    },1010);
-    $('#explorable_transparency').empty();
-    $('#explorable_transparency').append(
-    '<video src="img/okc_after.mp4" autoplay loop class="placeholder-image"></video>')
-  } else {
-    $('#explorable_transparency').addClass('flip');
-    setTimeout(function(){
-      $('#explorable_transparency').removeClass('flip');
-    },1010);
-    $('#explorable_transparency').empty();
-    $('#explorable_transparency').append(
-    '<video src="img/okc_before.mp4" autoplay loop class="placeholder-image"></video>')
-  }
 
-}
 // if ($('#explorable_transparency').find('video')[0].includes('before')){
 //   console.log('before')
 // }

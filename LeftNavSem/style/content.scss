@@ -31,11 +31,13 @@ transform: translateX(-50%);
 }
 
 .title-div{
+ 
   display: inline-block;
   position: relative;
   margin: 5px;
   position: relative;
   border: 2px $red solid;
+  
 /*   background: $gradient-pink-tan; */
 
 }
@@ -59,8 +61,9 @@ transform: translateX(-50%);
 
 
 .title-holder{
+
   mix-blend-mode: multiply;
-  margin: 30px 0px 60px 0px;
+  margin: 90px 0px 60px 0px;
   position: relative;
     pointer-events: none;
 
@@ -74,7 +77,7 @@ transform: translateX(-50%);
   transform: translateX(-50%);
   position: relative;
   margin: 10px;
-  border: 1px $red solid;
+/*   border: 1px $red solid; */
   width: 80%;
   min-height: 20vw;
 

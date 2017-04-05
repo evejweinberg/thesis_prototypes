@@ -9,7 +9,7 @@ var AnimationOn = false;
 // console.log('A/B testing: ' + AnimationOn);
 
 var lossAversionExample =
-  '<div id="form-test" class="loss-aversion-container"><div class="loss-aversion-box">'+
+  '<div id="form-test" class="loss-aversion-container"><div class="loss-aversion-box bottom-to-top">'+
     '<div id="Questionaire"><h2 class="loss-aversion-h2">Thanks!</h2>'+
   '<p>How frustrating was that?</p><div id="slider">0 '+
   '<input id="slide" type="range" min="0" max="10" step="1" value="0" onchange="updateSlider(this.value)" />'+
@@ -48,29 +48,29 @@ var t = $('#explorable_loss')[0].parentElement;
 // console.log($(t).find('.explorable'))
   $(t).find('.explorable').css({'border': '0px red solid'})
   $('#explorable_loss').html(lossAversionExample);
-  $('#button_loss').click(function(){
-    if(AnimationOn == false){
-      AnimationOn = true;
-      resetFrom();
-      $(this).css({'background-image':'url(img/button_lossB.png)'})
-      var el   = $(this),
-     newone = el.clone(true);
-     el.before(newone);
-     $(this).remove();
-
-    } else {
-      AnimationOn = false;
-      resetFrom();
-      $(this).css({'background-image':'url(img/button_loss.png)'})
-      var el     = $(this),
-     newone = el.clone(true);
-     el.before(newone);
-     $(this).remove();
-
-
-    }
-
-  })
+  // $('#button_loss').click(function(){
+  //   if(AnimationOn == false){
+  //     AnimationOn = true;
+  //     resetFrom();
+  //     $(this).css({'background-image':'url(img/button_lossB.png)'})
+  //     var el   = $(this),
+  //    newone = el.clone(true);
+  //    el.before(newone);
+  //    $(this).remove();
+  //
+  //   } else {
+  //     AnimationOn = false;
+  //     resetFrom();
+  //     $(this).css({'background-image':'url(img/button_loss.png)'})
+  //     var el     = $(this),
+  //    newone = el.clone(true);
+  //    el.before(newone);
+  //    $(this).remove();
+  //
+  //
+  //   }
+  //
+  // })
 
 
 
