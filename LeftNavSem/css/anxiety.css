@@ -1,3 +1,57 @@
+body {
+  background-color: #FEFEE5;
+  text-align: center;
+  font-family: "Helvetica";
+  /*   transition: all .4s ease-in-out; */ }
+
+html {
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
+.caps {
+  text-transform: uppercase; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2em; }
+
+.red-button {
+  transition: all .5s ease-in-out;
+  border-radius: 10px;
+  background-color: #FF6666;
+  color: #FEFEE5;
+  box-shadow: 0.5px 1px 2px 1px rgba(0, 0, 0, 0.3);
+  margin: 0px 20px 10px 20px; }
+
+.temp {
+  /*   border: 2px dashed green; */ }
+
+.red-button:hover {
+  cursor: pointer;
+  background-color: #DD5858;
+  font-size: 1.87em;
+  transform: scale(1.1); }
+
+.light {
+  font-weight: lighter; }
+
+.inactive-button {
+  font-size: 1.7em;
+  border-radius: 10px;
+  background-color: #F48788;
+  color: #DD5858; }
+
+.twenty-vh-spacer {
+  width: 100%;
+  position: relative;
+  height: 20vh; }
+
 .anxiety-flex {
   display: flex; }
 
@@ -46,15 +100,14 @@
   mask: url(../img/gage.png) top left/contain no-repeat; }
 
 #needleWide {
-  transition: all .3s ease-in alternate;
+  transition: all .3s ease-in;
   transform-origin: 0% 70%;
-  background-color: red;
+  background-color: #FF6666;
   width: 3000%;
   top: -200px;
   height: 400px;
   position: relative;
-  border-radius: 3px;
-  }
+  border-radius: 3px; }
 
 .mask-top {
   position: absolute;
@@ -97,11 +150,10 @@ svg {
 
 #gage-png {
   position: absolute;
-  width: 79%;
+  width: 100%;
   top: 0px;
   left: 50%;
-  transform: translateX(-50%);
-  }
+  transform: translateX(-50%); }
 
 .outline {
   fill: #FF6767; }
@@ -138,16 +190,26 @@ text {
   border: 1px solid grey;
   width: 50px;
   height: 50px;
+  position: relative;
   float: left;
-  display: inline-block; }
+  left: 5%;
+  display: block;
+  margin: 5px; }
 
 .anxiety-title {
   margin: 20px; }
 
+#slider-down {
+  /*     left: 5%; */ }
+
 #slider-down:hover {
   background: grey; }
 
+#slider-up {
+  /*   left: 100px; */
+  /*   transform: scale(1); */ }
+
 #slider-up:hover {
-  background: grey; }
+  background: #DD5858; }
 
 /*# sourceMappingURL=anxiety.css.map */

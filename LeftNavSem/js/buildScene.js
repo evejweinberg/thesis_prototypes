@@ -211,11 +211,20 @@ function BuildBoxes(){
     allSections.forEach(section => {
       if (section.title == $(this).text()){
         findMe = section.id;
-        findMeId = "#"+findMe+""
+        findMeId = "#"+findMe+"";
+        console.log(findMeId)
         replaceMe = $('.flex-child-main').find(findMeId.toString());
+        if (findMe == 'dark') {
+          $('body').css({	"filter": "invert(100%)"})
+          $('body').css({	"background": "black"})
+        } else {
+          $('body').css({	"filter": "invert(0%)"})
+          $('body').css({	"background": "white"})
+          }
       }
     })
     scrollTo(heroContentHolder)
+    console.log(replaceMe)
     $('#heroContentHolder .heroCenter').empty();
     $('#heroContentHolder .heroCenter').append(replaceMe);
   })
@@ -237,10 +246,9 @@ function BuildHeroDiv(){
 
 
 function checkInner(sectionId){
-  console.log('checking '+ sectionId)
+  // console.log('checking '+ sectionId)
   if (sectionId == 'loss'){
-    console.log('LOSS');
-
+    // console.log('LOSS');
       $('#explorable_loss').addClass('flip');
       setTimeout(function(){
         $('#explorable_loss').removeClass('flip');
@@ -254,6 +262,27 @@ function checkInner(sectionId){
         resetFrom();
       }
     };
+
+  if (sectionId == 'chunking'){
+    // console.log('FLOW');
+      $('#explorable_chunking').addClass('flip');
+      setTimeout(function(){
+        $('#explorable_chunking').removeClass('flip');
+      },1010);
+
+      if(FlowOn == false){
+        FlowOn = true;
+        $('#explorable_chunking').empty();
+        $('#explorable_chunking').append(
+        flowHTML)
+      } else {
+        FlowOn = false;
+        $('#explorable_chunking').empty();
+        $('#explorable_chunking').append(
+        '<video src="img/okc_after.mp4" autoplay loop class="placeholder-image"></video>')
+      }
+
+  };
 
   var tempbb = $('#explorable_transparency').find('video')[0]
   if (tempbb.src.includes('before')){
@@ -286,7 +315,7 @@ function createRandomBoxes(){
     $(temp).addClass('randomBoxes');
     $(temp).css('background', cols[i%cols.length]);
     $(temp).css({
-    'top': Math.random()*maxWidth + 'px',
+    'top': Math.random()*maxWidth/2 + 'px',
     'left':Math.random()*maxWidth + 'px',
     'border-radius': Math.round(Math.random()*30),
     'width': Math.round(random),
@@ -295,4 +324,18 @@ function createRandomBoxes(){
 
     $('#main-site-intro').append(temp);
   }
+}
+
+
+
+function HeroArrows(){
+  $('#heroBack').click(function(){
+    var thisOne = $('.heroCenter > .section').attr('id')
+    for (section in allSections){
+      // console.log(thisOne,section.id)
+      if (section.id == thisOne){
+        // console.log(thisOne)
+      }
+    }
+  })
 }

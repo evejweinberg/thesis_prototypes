@@ -27,7 +27,7 @@ var allSections = [
 'something': 'temp',
 "Intro": 'Anxiety is a negative emotion that is easy to trigger. Although easy to implement, it can lead to negative results from smart users and if triggered at certain times can be unethical.',
 'rwe_title':'New York Times 2016 Election Needle',
-'rwe_body': 'People responded very negatively to the NYTimes.com animation of the running vote count.'
+'rwe_body': '<p>"The New York Times has a wildly swinging forecast needle that is driving everyone insane"</p><a href="http://www.businessinsider.com/new-york-times-election-needle-2016-11?op=1" target="_blank"><img src="./img/nyt.png" width="100%" height="100%"></a>'
 
 },
 
@@ -56,8 +56,8 @@ var allSections = [
 'category': 'psychology',
 'something': 'temp',
 "Intro": 'Show the work being done. Users will empathize with your product (and team!), and place greater value on your offering. In turn they will sit through lnger load times and are more likely to complete desired behavior because of the relationship you have created.',
-'rwe_title':'L2 Study',
-'rwe_body': 'L2 vimeo link goes in here!.'
+'rwe_title':'L2Inc Study',
+'rwe_body': 'SOLD Clinic 2015 - Michael Norton:'
 
 },
 {
@@ -80,7 +80,7 @@ var allSections = [
 'gif': 'img/box_dark.gif',
 'category': 'psychology',
 'something': 'temp',
-"Intro": 'Dark Patterns are immoral and unethical. We will NOT be covering them here.',
+"Intro": "<p>Dark Patterns are tricks used in websites and apps that make you buy or sign up for things that you didn't mean to. Dark Patterns are immoral and unethical. We will NOT be covering them here. The types of Dark patterns are <a href='https://darkpatterns.org/types-of-dark-pattern' target='_blank'>Bait and Switch, Disguised Ads, Forced Continuity, Hidden Costs, Seak Into Basket. . .</a></p>",
 'rwe_title':'Lynda UX Course on Persuasive Ethics',
 'rwe_body': '<p><a href="">This Course</a> explains some of the dark patterns, what to look out for as a consumer, and what to avoid as a professional.</p>.'
 
@@ -107,9 +107,9 @@ var allSections = [
 'category': 'fogg',
 'gif': 'img/box_bm.gif',
 'something': 'temp',
-"Intro": 'BJ Fogg’s Behavioral Model states that three elements must exist at the same time in order for your desired user behavior to occur (they can be organic or stimulated from you): MOTIVATION, ABILITY, and the TRIGGER. This is the overarching principle of Captology. Do not waste klout with your users or developer dollars asking for anything unless it is the right time to ask.',
-'rwe_title':'Kickstarter',
-'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+"Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>",
+'rwe_title':'Coming Soon!',
+'rwe_body': 'Coming Soon'
 
 },
 
@@ -119,9 +119,9 @@ var allSections = [
 'category': 'explorable',
 'gif': 'img/box_explorable.gif',
 'something': 'temp',
-"Intro": "This whole site utilizes a learning method called 'Explorable explanations'. Users learn faster and more deeply when you let them play, manipulate, and see the effects of their changes.",
-'rwe_title':'Explorables',
-'rwe_body': '<p>This website is full of amazing explorables. Play with them and you can be the judge of how comprehension and retention is affected. Play with this meta-explorable, teaching you the 6 layers of education.</p>'
+"Intro": "This whole site utilizes a learning method called 'Explorable Explanations'. Users learn faster and more deeply when you let them play, seeing the effects of their changes. Play with this meta-explorable, teaching you the 6 layers of education.",
+'rwe_title':'More Info and Examples',
+'rwe_body': '<p>Explorables are popping up everywhere. <a href="http://nyti.ms/2oOzwmM" target="_blank">The New York Times</a> used them to explain Uber driver psychology. <a href="http://explorableexplanations.com/" target="_blank">This entire website</a> lists many and also explains how you can make your own. Play with them and you can be the judge of how comprehension and retention is affected. A few more of my favorite examples are: <a href="http://bit.ly/2oeO555" target="_blank">Seeing Theory</a>, a simple one: <a href="http://hereistoday.com/" target="_blank">Here Is Today</a>, and <a href="https://pudding.cool/" target="_blank">Anything by The Pudding</a>. Oh, <a href="http://setosa.io/#/" target="_blank">one more gold mine!</a></p>'
 
 },
 
@@ -160,10 +160,12 @@ var allSections = [
 'id': 'chunking',
 'gif': 'img/box_flow.gif',
 'category': 'flow',
+'buttonA': 'Add Flow',
+'buttonB': 'Remove Flow',
 'something': 'temp',
-"Intro": 'CHUNKING is an example of a facilitator. It is just breaking down one desired behavior into steps. This not only reduces cognitive load, but users are more likely to complete things if they know how close to the end they area.',
-'rwe_title':'Kickstarter',
-'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
+"Intro": 'Animation can help the user "Flow" quickly through your experience! Tactics to implement are CHUNKING, REDUCTION, TUNNELING, making STEP-PROGRESS, and FOOT-IN-THE-DOOR ordering. These techniques not only reduces cognitive load, but users are more likely to complete things if they know how close to the end they area.',
+'rwe_title':'More Info',
+'rwe_body': 'Nothing yet.'
 
 }
 

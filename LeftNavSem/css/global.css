@@ -61,6 +61,9 @@ body {
   height: 120px;
   position: relative; }
 
+p {
+  font-size: 1.1em; }
+
 #hope-after {
   position: absolute;
   /*left: 70px;*/
@@ -159,6 +162,7 @@ body {
     transform: scale(0.7) translateX(-85%); } }
 .randomBoxes {
   position: absolute;
-  z-index: -10; }
+  z-index: -10;
+  }
 
 /*# sourceMappingURL=global.css.map */

@@ -44,8 +44,8 @@ var anxietyHTML = '<div class="anxiety-flex">'+
     '<div class="slider-holder anxiety-flex-side">'+
       '<div class="anxiety-input-section">'+
 
-      '<p id="">ADD ANXIETY</p><div class="anxiety-button" id="slider-down" ><i class="minus icon"></i></div>'+
-      '<div class="anxiety-button" id="slider-up"><i class="plus icon"></i></div>'+
+      '<p id="">ADD ANXIETY</p><div class="anxiety-button c-button" id="slider-down" ><i class="minus icon"></i></div>'+
+      '<div class="anxiety-button c-button" id="slider-up"><i class="plus icon"></i></div>'+
     '</div></div></div>';
 
 

@@ -120,7 +120,7 @@ h2 {
   transform: translateX(-50%);
   position: relative;
   margin: 50px 0px;
-  border: 1px #FF6666 solid;
+  border-top: 1px #a5a5a5 solid;
   width: 20vw;
   height: 200px;
   overflow: hidden;
@@ -171,7 +171,8 @@ h2 {
   top: 24%;
   line-height: 37px;
   position: relative;
-  font-size: 1.7em; }
+  font-size: 1.7em;
+  pointer-events: none; }
 
 .category {
   color: #a0a0a0 !important;

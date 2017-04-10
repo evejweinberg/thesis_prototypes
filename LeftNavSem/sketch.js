@@ -13,11 +13,6 @@ function start(){
 
   scrollTo(boxesHolder)
 
-
-  // $('.nav-all').css('left','0px');
-  // $('.nav-all').css('opacity','1');
-
-
 }
 
 //build everythngi
@@ -27,6 +22,7 @@ BuildBoxes();
 BuildScene();
 addExtras();
 createRandomBoxes();
+HeroArrows();
 
 // enableScroll();
 
@@ -45,7 +41,7 @@ $(".nav-all .link").click(function(evt){
 function test()
 {
    var $this = $(this);
-   console.log($this)
+  //  console.log($this)
    $('.nav-all .item').removeClass('nav-highlighted');
    $($this).addClass('nav-highlighted');
 }
@@ -61,14 +57,14 @@ possiblePosSprite.push(2400/spritesheetNum *i)
 }
 
 //get mouse X position
-$(".flex-parent").mousemove(function(e){
-  console.log(e.offsetY)
- var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
+$("body").mousemove(function(e){
+  // console.log(e.offsetY)
+ var curIndex = Math.floor (e.offsetY/ ($(window).height()/spritesheetNum))
   var ratio = 240/1200;
    var yoffset = Math.round(-1* (240)*curIndex)
    var cons = 'background-position: 0px '+ yoffset + 'px'
    $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
-   $(".randomBoxes").css('transform', 'translateY('+e.offsetY*.9+'px) rotateZ('+yoffset/80+'deg)')
+   $(".randomBoxes").css('transform', 'translateY('+e.offsetY*.1+'px)  rotateZ('+e.offsetY+'deg)')
 
 })
 
@@ -124,43 +120,39 @@ var offsetfromTop = 200;
 function checkSlide(e){
 
 //check for dark pattern
-const darkTop = darkpattern.offsetTop-120;
-
-  // const slideInAt = (window.scrollY + window.innerHeight) - darkpattern.offsetTop;
-        // bottom of the image
-  const isNotScrolledPast = window.scrollY < darkpattern.offsetTop-offsetfromTop;
-  const bottom = darkpattern.offsetTop + darkpattern.offsetHeight-400;
-  // console.log('top: '+ darkTop)
-  // console.log(window.scrollY)
-  // console.log('bottom: '+ bottom)
-        if (window.scrollY >  darkTop && window.scrollY < bottom) {
-          $('body').css({	"filter": "invert(100%)"})
-          $('body').css({	"background": "black"})
-        } else {
-          $('body').css({	"filter": "invert(0%)"})
-          $('body').css({	"background": "white"})
-          }
+// const darkTop = darkpattern.offsetTop-200;
+//
+//   const isNotScrolledPast = window.scrollY < darkpattern.offsetTop-offsetfromTop;
+//   const bottom = darkpattern.offsetTop + darkpattern.offsetHeight-400;
+//
+//         if (window.scrollY >  darkTop && window.scrollY < bottom) {
+//           $('body').css({	"filter": "invert(100%)"})
+//           $('body').css({	"background": "black"})
+//         } else {
+//           $('body').css({	"filter": "invert(0%)"})
+//           $('body').css({	"background": "white"})
+//           }
 
 }
 
 //why is this firing twice?
-$('.link').click(function(){
-  $('body').css({	"filter": ""})
-  $('body').css({	"background": ""})
-  // var darkClick = $(this+":contains('dark')")
-  console.log($(this).text())
-  if ($(this).text() == "Dark Patterns"){
-    console.log('dark clicked')
-    $('body').css({	"filter": "invert(100%)"})
-    $('body').css({	"background": "black"})
-
-
-  } else {
-    console.log('other thing clicked')
-    $('body').css({	"filter": "invert(0%)"})
-    $('body').css({	"background": "white"})
-  }
-})
+// $('.link').click(function(){
+//   $('body').css({	"filter": ""})
+//   $('body').css({	"background": ""})
+//   // var darkClick = $(this+":contains('dark')")
+//   // console.log($(this).text())
+//   if ($(this).text() == "Dark Patterns"){
+//     // console.log('dark clicked')
+//     $('body').css({	"filter": "invert(100%)"})
+//     $('body').css({	"background": "black"})
+//
+//
+//   } else {
+//     console.log('other thing clicked')
+//     $('body').css({	"filter": "invert(0%)"})
+//     $('body').css({	"background": "white"})
+//   }
+// })
 
 
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
@@ -182,7 +174,7 @@ function preventDefaultForScrollKeys(e) {
 function disableScroll() {
 
   if (window.scrollY < 300){
-    console.log('less')
+    // console.log('less')
   if (window.addEventListener) // older FF
       window.addEventListener('DOMMouseScroll', preventDefault, false);
   window.onwheel = preventDefault; // modern standard

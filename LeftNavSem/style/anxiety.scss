@@ -3,6 +3,8 @@
 //   padding: 0;
 // }
 
+@import '_shared_variables.scss';
+
 .anxiety-flex {
   display: flex;
   // border: 2px red solid;
@@ -73,7 +75,7 @@ transform-origin: bottom left;
 #needleWide{
   transition: all .3s ease-in;
 transform-origin: 0% 70%;
-  background-color: red;
+  background-color: $red;
   width: 3000%;
   top: -200px;
   height: 400px;
@@ -196,8 +198,12 @@ text {
   border: 1px solid grey;
   width: 50px;
   height: 50px;
+  position: relative;
   float: left;
-display: inline-block;
+  left: 5%;
+display: block;
+  margin: 5px;
+
 }
 
 .anxiety-title{
@@ -205,18 +211,22 @@ display: inline-block;
 }
 
 #slider-down{
-  // background: yellow;
+/*     left: 5%; */
+
+
 }
 
 #slider-down:hover{
   background: grey;
+ 
 }
 
 #slider-up{
-  // background: red;
+/*   left: 100px; */
+/*   transform: scale(1); */
 
 }
 #slider-up:hover{
-  background: grey;
+  background: $red-B;
 
 }

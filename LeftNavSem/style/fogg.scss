@@ -1,0 +1,51 @@
+@import "_shared_variables";
+
+.fogg-flex-container{
+  display: flex;
+}
+
+.fogg-flex-child{
+  margin: 5px;
+  flex: 1;
+  min-height: 100px;
+  transition: all .5s ease-in-out;
+}
+
+.fogg-flex-child:hover{
+  box-shadow: $button-shadow;
+  transform: scale(1.1);
+ }
+
+
+.fogg-flex-container .motivation{
+  background: #3FA9F5;
+}
+
+.fogg-flex-container .ability{
+  background: #00FBD0;
+}
+
+.fogg-flex-container .trigger{
+  background: #FF404B;
+}
+
+.fogg-flex-container span{
+  font-weight: bold;
+}
+
+.fogg-interaction-space{
+  // border: 1px black solid;
+}
+
+.fogg-interaction-space > *{
+margin: 10px;
+}
+
+.fogg-instruction-space > *{
+margin: 10px;
+}
+
+
+
+// var cols = ['#00FBD0', '#3FA9F5', '#FF404B', '#0000FF', '#22B573','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
+// '-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0']
