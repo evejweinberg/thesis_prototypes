@@ -44,41 +44,23 @@ function resetFrom(){
     $('.over-it').click(ended);
     $('#done').click(submit);
 }
+
+// function doAdd(){
 var t = $('#explorable_loss')[0].parentElement;
 // console.log($(t).find('.explorable'))
   $(t).find('.explorable').css({'border': '0px red solid'})
   $('#explorable_loss').html(lossAversionExample);
-  // $('#button_loss').click(function(){
-  //   if(AnimationOn == false){
-  //     AnimationOn = true;
-  //     resetFrom();
-  //     $(this).css({'background-image':'url(img/button_lossB.png)'})
-  //     var el   = $(this),
-  //    newone = el.clone(true);
-  //    el.before(newone);
-  //    $(this).remove();
-  //
-  //   } else {
-  //     AnimationOn = false;
-  //     resetFrom();
-  //     $(this).css({'background-image':'url(img/button_loss.png)'})
-  //     var el     = $(this),
-  //    newone = el.clone(true);
-  //    el.before(newone);
-  //    $(this).remove();
-  //
-  //
-  //   }
-  //
-  // })
+
+// }
 
 
+$("body").on('click','#submit', check)
+$("body").on('click','#done', submit)
 
-
-
-$('#submit').click(check);
+// $('#submit').click(check);
 $('.over-it').click(ended);
-$('#done').click(submit);
+// $('#done').click(submit);
+
 
 //on 'submit' check for errors
 function check(){

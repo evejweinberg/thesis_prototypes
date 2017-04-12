@@ -8,7 +8,8 @@
 
 #main{
   pointer-events: none;
-  opacity: 0;
+/*   opacity: 0; */
+display: none;
   position: absolute;
   top:0px;
   index: -1000;

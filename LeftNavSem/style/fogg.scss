@@ -1,5 +1,9 @@
 @import "_shared_variables";
 
+$motivationCol: #3FA9F5;
+$abilityCol: #00FBD0;
+$triggerCol: #FF404B;
+
 .fogg-flex-container{
   display: flex;
 }
@@ -18,15 +22,15 @@
 
 
 .fogg-flex-container .motivation{
-  background: #3FA9F5;
+  background: $motivationCol;
 }
 
 .fogg-flex-container .ability{
-  background: #00FBD0;
+  background: $abilityCol;
 }
 
 .fogg-flex-container .trigger{
-  background: #FF404B;
+  background: $triggerCol;
 }
 
 .fogg-flex-container span{
@@ -34,15 +38,45 @@
 }
 
 .fogg-interaction-space{
+  margin-top: 30px;
+  box-shadow: 2px 6px 20px rgba(0,0,0,.3);
+  transition: all .5s ease-in-out;
   // border: 1px black solid;
 }
+
+.fogg-instruction-space{
+  box-shadow: 2px 6px 20px rgba(0,0,0,.3);
+  transition: all .5s ease-in-out;
+  // border: 1px black solid;
+}
+
+
 
 .fogg-interaction-space > *{
 margin: 10px;
 }
 
+.fogg-interaction-space > img{
+width: 90%;
+}
+
 .fogg-instruction-space > *{
 margin: 10px;
+}
+
+#motivation_instruction{
+  background: $motivationCol;
+  padding: 50px;
+}
+
+#ability_instruction{
+  background: $abilityCol;
+  padding: 50px;
+}
+
+#trigger_instruction{
+  background: $triggerCol;
+  padding: 50px;
 }
 
 

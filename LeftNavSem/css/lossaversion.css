@@ -4,7 +4,7 @@
   font-weight: normal;
   font-style: normal; }
 .loss-aversion-container {
-  /* width: 50vw; */
+  max-width: 500px;
   display: block;
   padding: 15px;
   /* height: 28vw; */
@@ -22,16 +22,16 @@
   padding-top: 10px;
   box-shadow: 1px 10px 6px 3px rgba(0, 0, 0, 0.06); }
 
-/* 
+/*
    .bottom-to-top {
     border-width: 3px;
     border-style: solid;
-    -webkit-border-image: 
+    -webkit-border-image:
       -webkit-gradient(linear, 0 100%, 0 0, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image: 
+    -webkit-border-image:
       -webkit-linear-gradient(bottom, #dd0808, rgba(0, 0, 0, 0)) 1 100%;
     -moz-border-image:
-      -moz-linear-gradient(bottom, #ff0505, rgba(0, 0, 0, 0)) 1 100%;  
+      -moz-linear-gradient(bottom, #ff0505, rgba(0, 0, 0, 0)) 1 100%;
     -o-border-image:
       -o-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;
     border-image:

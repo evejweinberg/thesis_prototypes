@@ -21,6 +21,7 @@ p {
     /*left: 70px;*/
     /*top: 40vh;*/
     width: 49vw;
+/*     border: 2px red solid; */
   }
 
 
@@ -83,8 +84,10 @@ p {
 #main-site-intro{
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
+  position: relative;
   // background-image: url(../img/bg2.png);
-  background-size: cover;
+  // background-size: cover;
 }
 
 
@@ -118,6 +121,8 @@ from { background-position:    0px; }
   top: 43%;
   left: 50%;
   transform: translateX(-50%);
+/*     border: 3px red solid; */
+
 }
 .dot{
   width: 20px;
@@ -143,4 +148,5 @@ from { background-position:    0px; }
 .randomBoxes{
   position: absolute;
   z-index: -10;
+/*   border: 3px red solid; */
 }

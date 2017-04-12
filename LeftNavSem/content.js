@@ -55,7 +55,7 @@ var allSections = [
 'buttonB': 'Back to default',
 'category': 'psychology',
 'something': 'temp',
-"Intro": 'Show the work being done. Users will empathize with your product (and team!), and place greater value on your offering. In turn they will sit through lnger load times and are more likely to complete desired behavior because of the relationship you have created.',
+"Intro": 'Show the work being done. Users will empathize with your product (and team!), and place greater value on your offering. In turn they will sit through longer load times and are more likely to complete desired behavior because of the relationship you have created.',
 'rwe_title':'L2Inc Study',
 'rwe_body': 'SOLD Clinic 2015 - Michael Norton:'
 

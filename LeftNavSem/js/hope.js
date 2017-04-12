@@ -1,10 +1,7 @@
 $(".glitter").mouseenter(function(event){
-  // glitterize(this);
+
 
   var rect = this.getBoundingClientRect();
-  // console.log('jQueryleft: '+ this.offsetLeft)
-// console.log(rect.top, rect.right, rect.bottom, rect.left);
-// console.log(event.clientX, event.clientY)
 
   var color = Math.floor(Math.random()*255-30)
   startExperience(this, event.clientX, event.clientY)

@@ -1,7 +1,7 @@
 var cols = ['#00FBD0', '#3FA9F5', '#FF404B', '#0000FF', '#22B573','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
 '-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0']
 
-
+var obj = {}
 function BuildScene(){
 var n = 0;
 
@@ -120,6 +120,7 @@ var n = 0;
   n ++;
     //add the whole thing to the page
     $('#main').append(this_section);
+    // obj[section.id]=this_section
   })
 
 
@@ -208,12 +209,14 @@ function BuildBoxes(){
 
   $('.box-section').click(function(event){
     var replaceMe, findMe, findMeId;
+    var clone = null;
     allSections.forEach(section => {
       if (section.title == $(this).text()){
         findMe = section.id;
         findMeId = "#"+findMe+"";
-        console.log(findMeId)
+        // console.log(findMeId)
         replaceMe = $('.flex-child-main').find(findMeId.toString());
+        // clone = $(replaceMe).clone()
         if (findMe == 'dark') {
           $('body').css({	"filter": "invert(100%)"})
           $('body').css({	"background": "black"})
@@ -224,9 +227,13 @@ function BuildBoxes(){
       }
     })
     scrollTo(heroContentHolder)
-    console.log(replaceMe)
-    $('#heroContentHolder .heroCenter').empty();
-    $('#heroContentHolder .heroCenter').append(replaceMe);
+    // console.log(replaceMe)
+
+
+// $('#heroContentHolder .heroCenter').html(obj[findMe]);
+    // $('#heroContentHolder .heroCenter').html(clone);
+    $('#heroContentHolder .heroCenter').html(replaceMe);
+
   })
 
 
@@ -290,16 +297,15 @@ function checkInner(sectionId){
     setTimeout(function(){
       $('#explorable_transparency').removeClass('flip');
     },1010);
-    $('#explorable_transparency').empty();
-    $('#explorable_transparency').append(
+    $('#explorable_transparency').html(
     '<video src="img/okc_after.mp4" autoplay loop class="placeholder-image"></video>')
   } else {
     $('#explorable_transparency').addClass('flip');
     setTimeout(function(){
       $('#explorable_transparency').removeClass('flip');
     },1010);
-    $('#explorable_transparency').empty();
-    $('#explorable_transparency').append(
+    // $('#explorable_transparency').empty();
+    $('#explorable_transparency').html(
     '<video src="img/okc_before.mp4" autoplay loop class="placeholder-image"></video>')
   }
 

@@ -1,6 +1,6 @@
 var t = $('#explorable_fogg')[0].parentElement
 $(t).find('.explorable').css({'border': '0px red solid'})
-$(t).find('.explorable').css({'box-shadow': '2px 6px 20px rgba(0,0,0,.3)'})
+// $(t).find('.explorable').css({'box-shadow': '2px 6px 20px rgba(0,0,0,.3)'})
 $('#explorable_fogg').empty();
 // $('#explorable_fogg').append('<img src="./img/foggA.png">')
 
@@ -11,26 +11,51 @@ var foggHTML = '<div class="fogg-flex-container">'+
   '</div></div><div class="fogg-instruction-space"></div><div class="fogg-interaction-space"></div>';
 
   var foggInstructionMotivation =
-  '<img src="./img//fogg_instruction_motivation.png">';
+  '<img id="motivation_instruction" src="./img//fogg_instruction_motivation.png">';
+
+  var foggInstructionTrigger =
+  '<img id="trigger_instruction" src="./img//fogg_instruction_trigger.png">';
 
   var foggInstructionAbility =
-  '<img src="./img//fogg_instruction_ability.png">';
+  '<img id="ability_instruction" src="./img//fogg_instruction_ability.png">';
 
 
-$('#explorable_fogg').append(foggHTML)
+$('#explorable_fogg').append(foggHTML);
+
 
 
 $('.motivation').click(function(){
-  $('.fogg-interaction-space').html();
-  $('.fogg-interaction-space').append(foggInstructionMotivation);
-  $('.fogg-interaction-space').append("<img src='./img/fogg_motivation.png'>");
+  $('.fogg-instruction-space').html('');
+  $('.fogg-instruction-space').append(foggInstructionMotivation);
+  if ( $("#iifogg_motivation").parents(".fogg-interaction-space").length == 1 ) {
+
+    } else {
+      $('.fogg-interaction-space').append("<img id='iifogg_motivation' src='./img/fogg_motivation.png'>");
+    }
 })
 
 
 $('.ability').click(function(){
-  $('.fogg-interaction-space').html();
-  $('.fogg-interaction-space').append(foggInstructionAbility);
-  $('.fogg-interaction-space').append("<img src='./img/fogg_ability.png'>");
+  $('.fogg-instruction-space').html('');
+  $('.fogg-instruction-space').append(foggInstructionAbility);
+  if ( $("#iifogg_ability").parents(".fogg-interaction-space").length == 1 ) {
+
+    } else {
+      $('.fogg-interaction-space').append("<img id='iifogg_ability' src='./img/fogg_ability.png'>");
+    }
+
+})
+
+
+$('.trigger').click(function(){
+  $('.fogg-instruction-space').html('');
+  $('.fogg-instruction-space').append(foggInstructionTrigger);
+  if ( $("#iifogg_trigger").parents(".fogg-interaction-space").length == 1 ) {
+
+    } else {
+      $('.fogg-interaction-space').append("<img id='iifogg_trigger' src='./img/fogg_trigger.png'>");
+    }
+
 })
 
 
