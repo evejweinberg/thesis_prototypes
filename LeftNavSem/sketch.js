@@ -50,7 +50,7 @@ function test()
 
 
 
-var spritesheetNum = 31
+var spritesheetNum = 24
 var possiblePosSprite = []
 for (var i = 0; i < spritesheetNum+1; i++){
 possiblePosSprite.push(2400/spritesheetNum *i)
@@ -59,12 +59,12 @@ possiblePosSprite.push(2400/spritesheetNum *i)
 //get mouse X position
 $("body").mousemove(function(e){
   // console.log(e.offsetY)
- var curIndex = Math.floor (e.offsetY/ ($(window).height()/spritesheetNum))
+ var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
   var ratio = 240/1200;
    var yoffset = Math.round(-1* (240)*curIndex)
    var cons = 'background-position: 0px '+ yoffset + 'px'
    $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
-   $(".randomBoxes").css('transform', 'translateY('+e.offsetY*.1+'px)  rotateZ('+e.offsetY+'deg)')
+   $(".randomBoxes").css('transform', 'translateY('+e.offsetX*.1+'px)  rotateZ('+e.offsetX+'deg)')
 
 })
 

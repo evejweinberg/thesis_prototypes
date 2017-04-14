@@ -291,6 +291,8 @@ function checkInner(sectionId){
 
   };
 
+  if (sectionId == 'transparency'){
+
   var tempbb = $('#explorable_transparency').find('video')[0]
   if (tempbb.src.includes('before')){
     $('#explorable_transparency').addClass('flip');
@@ -308,6 +310,7 @@ function checkInner(sectionId){
     $('#explorable_transparency').html(
     '<video src="img/okc_before.mp4" autoplay loop class="placeholder-image"></video>')
   }
+}
 
 }
 

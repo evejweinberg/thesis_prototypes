@@ -71,14 +71,12 @@ p {
     pointer-events: none;
     background-repeat: no-repeat;
     display: block;
-    // background-size: 100%;
+    transition: left, transform, top, scale .2s ease-in-out;
     position: relative;
     width: 1200px;
     height: 240px;
-    left:39%;
-     transform: scale(.64) translateX(-35%);
 
-  background-image: url(../img/captology.png);
+  background-image: url(../img/title.png);
 }
 
 #main-site-intro{
@@ -121,9 +119,8 @@ from { background-position:    0px; }
   top: 43%;
   left: 50%;
   transform: translateX(-50%);
-/*     border: 3px red solid; */
-
 }
+
 .dot{
   width: 20px;
   height: 20px;
