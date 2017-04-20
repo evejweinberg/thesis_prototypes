@@ -11,7 +11,9 @@ function openNav(){
 
 function start(){
 
-  scrollTo(boxesHolder)
+  scrollTo(definition)
+
+  // scrollTo(boxesHolder)
 
 }
 
@@ -59,32 +61,14 @@ possiblePosSprite.push(2400/spritesheetNum *i)
 //get mouse X position
 $("body").mousemove(function(e){
   // console.log(e.offsetY)
- var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
+  var curIndex = Math.floor (e.offsetX/ ($(window).width()/spritesheetNum))
   var ratio = 240/1200;
-   var yoffset = Math.round(-1* (240)*curIndex)
-   var cons = 'background-position: 0px '+ yoffset + 'px'
-   $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
-   $(".randomBoxes").css('transform', 'translateY('+e.offsetX*.1+'px)  rotateZ('+e.offsetX+'deg)')
+  var yoffset = Math.round(-1* (240)*curIndex)
+  var cons = 'background-position: 0px '+ yoffset + 'px'
+  $(".animatedDiv").css({'background-position':'0px '+yoffset+'px'});
+  $(".randomBoxes").css('transform', 'translateY('+e.offsetX*.1+'px)  rotateZ('+e.offsetX+'deg)')
 
 })
-
-//hope
-// $('#3 img').click(function(){
-// if (this.src.indexOf('3b.jpg') >= 0){
-// this.src = "sketches/3.jpg"
-// } else {
-// this.src = "sketches/3b.jpg"
-// }
-// })
-//
-//
-// $('#12 img').click(function(){
-//   if (this.src.indexOf('b.jpg') >= 0){
-//   this.src = "sketches/12.jpg"
-//   } else {
-//   this.src = "sketches/12b.jpg"
-//   }
-// })
 
 
 window.addEventListener('scroll', debounce(checkSlide));

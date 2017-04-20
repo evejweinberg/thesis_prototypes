@@ -166,4 +166,10 @@ p {
   z-index: -10;
   /*   border: 3px red solid; */ }
 
+.definition {
+  position: relative;
+  margin: 0px 27vw;
+  margin-bottom: 200px;
+  font-size: 1.7em; }
+
 /*# sourceMappingURL=global.css.map */

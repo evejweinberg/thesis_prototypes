@@ -37,12 +37,12 @@ var allSections = [
 'gif': 'img/box_fear.gif',
 'category': 'emotion',
 'something': 'temp',
-'placeholderImage': "img/scarcity.png",
+'placeholderImage': "img/fear-01.jpg",
 'buttonA': 'Add Scarcity',
 'buttonB': 'Remove Scarcity',
 "Intro": 'Fear is sadly the strongest emotion to cultivate in your user. SCARCITY is a fear tactic. This is often leveraged through scarcity of time and amount. Using a combination of animation + text is stronger than just text alone.',
 'rwe_title':'Flight Searching',
-'rwe_body': 'oh brother! Searching for flights is stressful. You can conduct your own case study next time you buy a flight . . ..'
+'rwe_body': "<p>Next time you're searching for flights online, be wary of the messaging that says '1 ticket left.' This has been tested, by myself and larger eithics organizations, and in most cases these are false claims, just trying to leverage fear through scarcity. Consumer Group Choice wrote about a study they conducted, <a href='http://www.news.com.au/travel/travel-advice/money/consumer-group-choice-report-say-airlines-five-seats-left-warnings-are-misleading-dubious/news-story/d524dcba17d9edda76f4501299947c5d' target='_blank'> read about it here</a>.</p>"
 
 },
 

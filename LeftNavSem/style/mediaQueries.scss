@@ -8,8 +8,16 @@
 }
 
 @media (min-width:320px) {
+
+.fear-counter {
+    left:50%;
+    transform: translateX(-50%) scale(.3);
+    top: -5%;
+    position: absolute;
+ }
+
   /* smartphones, iPhone, portrait 480x320 phones */
-  
+
   #and-motion{
   font-size: 2.3em;
   }
@@ -41,9 +49,16 @@
 }
 @media (min-width:481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-  
-    #and-motion{
-  font-size: 3.3em;
+
+  .fear-counter {
+      left:50%;
+      transform: translateX(-50%) scale(.4);
+      top: -3%;
+      position: absolute;
+   }
+
+  #and-motion{
+    font-size: 3.3em;
   }
 
    .animatedDiv{
@@ -74,10 +89,18 @@
 }
 @media (min-width:641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-      #and-motion{
-  font-size: 4.3em;
+
+  .fear-counter {
+      left:50%;
+      transform: translateX(-50%) scale(.5);
+      top: 0%;
+      position: absolute;
+   }
+
+   #and-motion{
+    font-size: 4.3em;
   }
-  
+
  .animatedDiv{
     top: 00px;
     left: 9.5%;
@@ -109,7 +132,14 @@
 }
 @media (min-width:961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
- 
+
+  .fear-counter {
+      left:50%;
+      transform: translateX(-50%) scale(.6);
+      top: 7%;
+      position: absolute;
+   }
+
   .animatedDiv{
     top: 100px;
     left: 20%;
@@ -143,6 +173,13 @@
 }
 @media (min-width:1025px) {
   /* big landscape tablets, laptops, and desktops */
+
+  .fear-counter {
+      left:50%;
+      transform: translateX(-50%) scale(.7);
+      top: 7%;
+      position: absolute;
+   }
 
  .animatedDiv{
     top: 100px;

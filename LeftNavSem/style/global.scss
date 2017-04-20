@@ -147,3 +147,21 @@ from { background-position:    0px; }
   z-index: -10;
 /*   border: 3px red solid; */
 }
+
+.definition{
+  // width: 70%;
+  // left: 50%;
+  // transform: translateX(-50%);
+  position: relative;
+  margin: 0px 27vw;
+  margin-bottom: 200px;
+  font-size: $med-sm-font;
+}
+
+// $lrg-font: 3em;
+// $med-font: 2.5em;
+// $med-sm-font: 1.7em;
+// $font-size-p: 1.1em;
+// $sm-font: .8em;
+// $xsm-font: .5em;
+// $xl-font: 11vh;
