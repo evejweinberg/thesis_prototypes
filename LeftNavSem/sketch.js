@@ -12,36 +12,33 @@ function openNav(){
 function start(){
 
   scrollTo(definition)
-
   // scrollTo(boxesHolder)
 
 }
 
-//build everythngi
-BuildIntro();
+//build everything
+// BuildIntro();
 BuildHeroDiv();
 BuildBoxes();
 BuildScene();
-addExtras();
+// addExtras();
 createRandomBoxes();
 HeroArrows();
 
-// enableScroll();
 
 
 function scrollTo(thing){
   $('html, body').animate({
             scrollTop: $(thing).offset().top -30+ 'px'
         }, 1000);
-        return true;
+    return true;
 }
 
 
 $(".nav-all .link").click(function(evt){
    test.bind($(this))();
 });
-function test()
-{
+function test(){
    var $this = $(this);
   //  console.log($this)
    $('.nav-all .item').removeClass('nav-highlighted');
@@ -51,11 +48,11 @@ function test()
 
 
 
-
+//intro sprite reaction to mnouse
 var spritesheetNum = 24
 var possiblePosSprite = []
 for (var i = 0; i < spritesheetNum+1; i++){
-possiblePosSprite.push(2400/spritesheetNum *i)
+  possiblePosSprite.push(2400/spritesheetNum *i)
 }
 
 //get mouse X position
@@ -70,7 +67,7 @@ $("body").mousemove(function(e){
 
 })
 
-
+//not sure if i'm still using this
 window.addEventListener('scroll', debounce(checkSlide));
 
 //dont check too often
@@ -95,50 +92,10 @@ var darkpattern = document.getElementById('dark')
 var offsetfromTop = 200;
 
 
-
-
-// $( window ).resize(function() {
-//
-// });
-
 function checkSlide(e){
-
-//check for dark pattern
-// const darkTop = darkpattern.offsetTop-200;
-//
-//   const isNotScrolledPast = window.scrollY < darkpattern.offsetTop-offsetfromTop;
-//   const bottom = darkpattern.offsetTop + darkpattern.offsetHeight-400;
-//
-//         if (window.scrollY >  darkTop && window.scrollY < bottom) {
-//           $('body').css({	"filter": "invert(100%)"})
-//           $('body').css({	"background": "black"})
-//         } else {
-//           $('body').css({	"filter": "invert(0%)"})
-//           $('body').css({	"background": "white"})
-//           }
-
 }
 
-//why is this firing twice?
-// $('.link').click(function(){
-//   $('body').css({	"filter": ""})
-//   $('body').css({	"background": ""})
-//   // var darkClick = $(this+":contains('dark')")
-//   // console.log($(this).text())
-//   if ($(this).text() == "Dark Patterns"){
-//     // console.log('dark clicked')
-//     $('body').css({	"filter": "invert(100%)"})
-//     $('body').css({	"background": "black"})
-//
-//
-//   } else {
-//     console.log('other thing clicked')
-//     $('body').css({	"filter": "invert(0%)"})
-//     $('body').css({	"background": "white"})
-//   }
-// })
-
-
+//this was to disable scroll
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
@@ -178,19 +135,18 @@ function enableScroll() {
 }
 
 
-$(document).ready(
-  function(){
-    if (window.scrollY < 300){
-      // console.log(window.scrollY, window.innerHeight, 'disableScroll')
-      // disableScroll();
-    }
-})
+// $(document).ready(
+//   function(){
+//     if (window.scrollY < 300){
+//       // console.log(window.scrollY, window.innerHeight, 'disableScroll')
+//       // disableScroll();
+//     }
+// })
 
 
-
+//animation when case study is clicked
 $('.case-study-open').click(function(){
   if ($(this.parentNode.parentNode).hasClass('CSO')){
-    // console.log($(this.parentNode.parentNode))
     $(this.parentNode.parentNode).css({'width':'20vw'});
     $(this.parentNode.parentNode).css({'overflow':'hidden'});
     $(this).find('i').attr('class','arrow right icon');
@@ -198,7 +154,6 @@ $('.case-study-open').click(function(){
     $(this.parentNode).find('.case-study-after').css('opacity', '0');
 
   } else {
-    // console.log($(this.parentNode.parentNode))
     $(this.parentNode.parentNode).css({'width':'70vw'});
     $(this.parentNode.parentNode).css({'overflow':'scroll'});
     $(this).find('i').attr('class','arrow left icon')
@@ -208,9 +163,3 @@ $('.case-study-open').click(function(){
   }
 
 })
-
-
-
-
-
-// });

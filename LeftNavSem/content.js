@@ -80,7 +80,7 @@ var allSections = [
 'gif': 'img/box_dark.gif',
 'category': 'psychology',
 'something': 'temp',
-"Intro": "<p>Dark Patterns are tricks used in websites and apps that make you buy or sign up for things that you didn't mean to. Dark Patterns are immoral and unethical. We will NOT be covering them here. The types of Dark patterns are <a href='https://darkpatterns.org/types-of-dark-pattern' target='_blank'>Bait and Switch, Disguised Ads, Forced Continuity, Hidden Costs, Seak Into Basket. . .</a></p>",
+"Intro": "<p>Dark Patterns are tricks used in websites and apps that make you buy or sign up for things that you didn't mean to. Dark Patterns are immoral and unethical. We will NOT be covering them here. Examples of dark patterns are <a href='https://darkpatterns.org/types-of-dark-pattern' target='_blank'>Bait and Switch, Disguised Ads, Forced Continuity, Hidden Costs, Seak Into Basket.</a> If you see a dark pattern on a website, please <a href=' ' target='_blank'>report it</a></p>",
 'rwe_title':'Lynda UX Course on Persuasive Ethics',
 'rwe_body': '<p><a href="">This Course</a> explains some of the dark patterns, what to look out for as a consumer, and what to avoid as a professional.</p>.'
 
@@ -97,7 +97,7 @@ var allSections = [
 'buttonC': 'Add Friend Pressure',
 'buttonD': 'Add Authority pressure',
 "Intro": 'Social Pressure is a base minimum these days. Explore these examples and see how they make you feel.',
-'rwe_title':'Case Study Needed',
+// 'rwe_title':'Case Study Needed',
 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
 
 },
@@ -107,9 +107,9 @@ var allSections = [
 'category': 'fogg',
 'gif': 'img/box_bm.gif',
 'something': 'temp',
-"Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>",
-'rwe_title':'Coming Soon!',
-'rwe_body': 'Coming Soon'
+"Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>"
+// 'rwe_title':'Coming Soon!',
+// 'rwe_body': 'Coming Soon'
 
 },
 

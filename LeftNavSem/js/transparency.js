@@ -15,11 +15,10 @@ $('#explorable_transparency').find('video')[0].play()
 $('#transparency .case-study .case-study-after').append('<a href="https://vimeo.com/144923858/9ec84a3d83" target="_blank"><img src="./img/l2video.png" width="100%" height="100%"></a>')
 
 
-// if ($('#explorable_transparency').find('video')[0].includes('before')){
-//   console.log('before')
-// }
-
-// var transparencyVideo = document.createElement('video');
-// $(transparencyVideo).attr('src','./img/okc_before.mp4');
-// $(transparencyVideo).addClass('placeholder-image');
-// $('#explorable_transparency').append(transparencyVideo)
+//create a new div
+var explorable_meta = document.createElement('div');
+//add class to it
+$(explorable_meta).addClass('explorable_meta_closed exmet');
+//get element and insert this div
+var child = document.getElementById('transparency');
+child.parentNode.insertBefore(explorable_meta,child);

@@ -6,7 +6,6 @@ function BuildScene(){
 var n = 0;
 
   allSections.forEach(section => {
-    // console.log(section.id);
     var this_section = document.createElement('div');
     $(this_section).attr('id', section.id);
     $(this_section).addClass('section');
@@ -95,6 +94,8 @@ var n = 0;
     $(explorable_button).attr('id', 'button_'+section.id);
     $(this_section).append(explorable_button);
 
+    //if the section has a 'Real World Example', Then
+    //build the whole case study section
     if (section.rwe_title){
     var case_study = document.createElement('div');
     $(case_study).addClass('case-study');
@@ -117,7 +118,6 @@ var n = 0;
     $(this_section).append(case_study);
     }
 
-  n ++;
     //add the whole thing to the page
     $('#main').append(this_section);
     // obj[section.id]=this_section
@@ -126,20 +126,14 @@ var n = 0;
 
 }
 
-function addExtras(){
-  var explorable_meta = document.createElement('div');
-  $(explorable_meta).addClass('explorable_meta_closed exmet');
-  var child = document.getElementById('transparency');
-  child.parentNode.insertBefore(explorable_meta,child);
 
-}
+
+
+
+
 
 function BuildIntro(){
   var showVideo = false;
-  // var subtitle = document.createElement('div');
-  // $(subtitle).attr('id', 'title-subtitle');
-  // $(subtitle).html('Computers As Persuasive Tools <br> + Motion Graphics')
-  // $("#main-site-intro").append(subtitle);
 
 if (showVideo){
     $('#main-site-intro').append(
@@ -157,7 +151,6 @@ $('#main-site-intro').append('<i class="chevron down icon big universal-hover" i
 
   $('#intro-play').click(function(){
     if (introplaying){
-      // console.log(this)
       $(this).attr('class', "video play outline icon")
       $('#intro-video')[0].pause();
       //stop video
@@ -243,7 +236,7 @@ function BuildBoxes(){
 function BuildHeroDiv(){
   var herocenter = document.createElement('div');
   $(herocenter).addClass('heroCenter');
-  $(herocenter).append('<img src="" alt=""><p>placeholder gif goes here. Waiting for you to click a category!</p>');
+  $(herocenter).append('<img src="" alt=""><p>Waiting for you to click on a category above!</p>');
   $('#heroContentHolder').append("<i class='arrow big left icon universal-hover' id='heroBack'></i>");
   $('#heroContentHolder').append(herocenter);
   $('#heroContentHolder').append("<i class='arrow big right icon universal-hover' id='heroForward'></i>");

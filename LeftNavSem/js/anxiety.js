@@ -1,4 +1,4 @@
-
+function playAnxiety(){
 
 var anxietyHTML =
 '<div class="anxiety-title"> CHANCE OF WINNING US PRESIDENCY:<span class="output">30</span>%<p id="presidency-sm">(recieves input every 2 seconds)</p></div>'+
@@ -122,6 +122,7 @@ function updateNeedle(){
       duration: 2000/anxietyLevel,
       iterations: Infinity
       });
+};
 
 
 };
