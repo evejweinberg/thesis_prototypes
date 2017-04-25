@@ -15,6 +15,17 @@ var allBooks = [
 'left': 50,
 'translate': 50
 },
+
+{
+  'title': ' Motherboard: The Data That Turned The World Upside Down',
+'cover': 'img/src_mother.png',
+'type': 'Online',
+ 'position': "c",
+ 'left': 50,
+ 'translate': 50
+},
+
+
 {
   'title': ' Interactivity in multimedia learning: An integrated model’ by Jan L. Plass',
 'cover': 'https://images-na.ssl-images-amazon.com/images/I/51-hlKNdaDL._SX258_BO1,204,203,200_.jpg',

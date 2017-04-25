@@ -1,5 +1,5 @@
-var cols = ['#00FBD0', '#3FA9F5', '#FF404B', '#0000FF', '#22B573','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
-'-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0']
+var cols = ['#00FBD0', '#3FA9F5', '-webkit-linear-gradient(#FF404B, #FBB03B)','#FF404B', '#0000FF','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
+'-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0', '#22B573']
 
 var obj = {}
 function BuildScene(){
@@ -310,18 +310,19 @@ function checkInner(sectionId){
 
 function createRandomBoxes(){
 
-  for (var i =0; i < 50; i ++){
-    var random = Math.random()*(40-10)+10;
+  for (var i =0; i < 20; i ++){
+    var random = Math.random()*(60-10)+10;
+    var randomB = Math.random()*(20-0)+0;
     var maxWidth = 1400;
     var temp = document.createElement('div');
     $(temp).addClass('randomBoxes');
     $(temp).css('background', cols[i%cols.length]);
     $(temp).css({
     'top': Math.random()*maxWidth/2 + 'px',
-    'left':Math.random()*maxWidth + 'px',
+    'left':-200+ Math.random()*maxWidth + 'px',
     'border-radius': Math.round(Math.random()*30),
     'width': Math.round(random),
-    'height': Math.round(random)
+    'height': Math.round(random + randomB)
   });
 
     $('#main-site-intro').append(temp);

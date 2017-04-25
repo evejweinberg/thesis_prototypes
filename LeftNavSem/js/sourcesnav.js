@@ -77,7 +77,6 @@ allBooks.forEach(function(e, num){
     $(book).children('.book-3D').css({
       'transform': 'rotateY(-'+farDeg+'deg) scale(1)'
     })
-    // $(book).find('.spine').attr('class','spine spine-far-right');
 
   }
 

@@ -22,3 +22,6 @@ $(explorable_meta).addClass('explorable_meta_closed exmet');
 //get element and insert this div
 var child = document.getElementById('transparency');
 child.parentNode.insertBefore(explorable_meta,child);
+
+
+// http://codepen.io/evejweinberg/live/qrwKYR

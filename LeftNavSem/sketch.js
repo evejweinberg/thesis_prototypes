@@ -17,7 +17,7 @@ function start(){
 }
 
 //build everything
-// BuildIntro();
+BuildIntro();
 BuildHeroDiv();
 BuildBoxes();
 BuildScene();
