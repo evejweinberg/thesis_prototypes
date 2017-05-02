@@ -110,6 +110,11 @@ justify-content: center;
     left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
+    animation: ebbing .6s infinite alternate-reverse;
+  }
+
+  @keyframes ebbing {
+    to { width: 34px; height: 34px;}
   }
 
 

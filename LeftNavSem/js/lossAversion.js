@@ -1,3 +1,12 @@
+var AnimationOn = false;
+var lossAversionExample;
+
+
+
+function playloss(){
+  console.log('function loss called')
+
+
 //variables to keep track of how many rounds of errors the user endures
 var Name_errorCount = false;
 var Course_errorCount = false;
@@ -5,10 +14,10 @@ var Rating_errorCount = false;
 var errorRound = 0;
 
 //A-B testing the animation. 50/50 chance of it being ON or not
-var AnimationOn = false;
+
 // console.log('A/B testing: ' + AnimationOn);
 
-var lossAversionExample =
+lossAversionExample =
   '<div id="form-test" class="loss-aversion-container"><div class="loss-aversion-box bottom-to-top">'+
     '<div id="Questionaire"><h2 class="loss-aversion-h2">Thanks!</h2>'+
   '<p>How frustrating was that?</p><div id="slider">0 '+
@@ -35,94 +44,83 @@ var lossAversionExample =
     '  <input type="text" class="textInputField" id="rating"></div>'+
       '  <p class="static-message"></p>'+
       '  <button id="submit">Submit</button>'+
-      '  </div></div><p class="over-it"></p></div>'
+      '  </div></div><p class="over-it"><a href="http://codepen.io/evejweinberg/pen/LWXZWE" target="_blank">GET CODE</a></p></div>'
 
-function resetFrom(){
-    // $('#explorable_loss').html();
-    $('#explorable_loss').html(lossAversionExample);
-    $('#submit').click(check);
-    $('.over-it').click(ended);
-    $('#done').click(submit);
-}
 
-// function doAdd(){
-var t = $('#explorable_loss')[0].parentElement;
-// console.log($(t).find('.explorable'))
-  $(t).find('.explorable').css({'border': '0px red solid'})
+
+// var t = $('#explorable_loss')[0].parentElement;
+//   $(t).find('.explorable').css({'border': '0px red solid'})
   $('#explorable_loss').html(lossAversionExample);
 
-// }
+  //on 'submit' check for errors
+  function check(){
+
+    var nameVal = $('#name').val();
+    var nameArray = nameVal.split(' ');
+    var courseVal = $('#course-name').val();
+    var ratingVal = $('#rating').val();
+
+    //if the rating is not two digits....
+    if (ratingVal.length<2){
+        if (AnimationOn){
+          $('#rating').css({'border':'3px red solid'})
+        }
+          Rating_errorCount = true;
+      } else {
+         $('#rating').css({'border':'0px red solid'})
+      }
+
+      //if the course is not filled out
+      if (courseVal.length<1){
+        if (AnimationOn){
+          $('#course-name').css({'border':'3px red solid'})
+        }
+        Course_errorCount = true;
+        } else {
+          $('#course-name').css({'border':'0px red solid'})
+          Course_errorCount = false;
+        }
+
+    if (nameVal){
+        //check for first capital letter for both words
+        nameArray.forEach(function(name){
+          if (name[0] != name[0].toUpperCase()) {
+              Name_errorCount = true;
+          }
+        })
+     }
+
+     //if the name is not two words
+    if (!nameArray || nameArray.length != 2){
+        Name_errorCount = true;
+    }
+
+    // style the border red if it's wrong for either reason
+    if (Name_errorCount == true){
+      if (AnimationOn){
+      $('#name').css({'border':'3px red solid'})
+      }
+    } else {
+      $('#name').css({'border':'0px red solid'})
+    }
+
+    // if any part of the form has an error, shake and push to server, otherwise move on to ended()
+    if (Name_errorCount == true || Course_errorCount == true || Rating_errorCount == true){
+        shake();
+    } else {
+       ended();
+    }
+
+  }
+
 
 
 $("body").on('click','#submit', check)
 $("body").on('click','#done', submit)
-
-// $('#submit').click(check);
 $('.over-it').click(ended);
-// $('#done').click(submit);
 
 
-//on 'submit' check for errors
-function check(){
 
-
-  var nameVal = $('#name').val();
-  var nameArray = nameVal.split(' ');
-  var courseVal = $('#course-name').val();
-  var ratingVal = $('#rating').val();
-
-  //if the rating is not two digits....
-  if (ratingVal.length<2){
-      if (AnimationOn){
-        $('#rating').css({'border':'3px red solid'})
-      }
-        Rating_errorCount = true;
-    } else {
-       $('#rating').css({'border':'0px red solid'})
-    }
-
-    //if the course is not filled out
-    if (courseVal.length<1){
-      if (AnimationOn){
-        $('#course-name').css({'border':'3px red solid'})
-      }
-      Course_errorCount = true;
-      } else {
-        $('#course-name').css({'border':'0px red solid'})
-        Course_errorCount = false;
-      }
-
-  if (nameVal){
-      //check for first capital letter for both words
-      nameArray.forEach(function(name){
-        if (name[0] != name[0].toUpperCase()) {
-            Name_errorCount = true;
-        }
-      })
-   }
-
-   //if the name is not two words
-  if (!nameArray || nameArray.length != 2){
-      Name_errorCount = true;
-  }
-
-  // style the border red if it's wrong for either reason
-  if (Name_errorCount == true){
-    if (AnimationOn){
-    $('#name').css({'border':'3px red solid'})
-    }
-  } else {
-    $('#name').css({'border':'0px red solid'})
-  }
-
-  // if any part of the form has an error, shake and push to server, otherwise move on to ended()
-  if (Name_errorCount == true || Course_errorCount == true || Rating_errorCount == true){
-      shake();
-  } else {
-     ended();
-  }
-
-}
 
 
 
@@ -147,10 +145,10 @@ function shake(){
   } else {
     $('.static-message').text('**Fields were wrong :');
     if (Name_errorCount){
-      $('.static-message').append('Name ');
+      $('.static-message').append('Name, ');
     }
     if (Course_errorCount){
-      $('.static-message').append('Course ');
+      $('.static-message').append('Course, ');
     }
       if (Rating_errorCount){
       $('.static-message').append('Rating');
@@ -173,16 +171,6 @@ function shake(){
 
 
 function ended(){
-  // console.log('ended after '+ errorRound + ' rounds');
-  //post this number to server, with a unique ID
-  // data: {
-  // 'id': '####',
-  //   'rounds': [integer],
-  //   'quit: [boolean],
-  //   'animationOn': animationOn,
-  //   'frustration': [integer 1-10], dont know yet
-  // }
-
   //move on to 1 feedback question
   $('.form-text').fadeOut();
   $('#Questionaire').fadeIn();
@@ -196,14 +184,18 @@ $('#slider-answer').text(slideAmount)
 function submit(){
   $('#Questionaire').fadeOut();
   $('#Final').fadeIn();
-  //post this answers to server with the same unique ID
-    //post this number to server, with a unique ID
-  // data: {
-  // 'id': '####',
-  //   'rounds': [integer],
-  //   'quit: [boolean],
-  //   'animationOn': animationOn,
-  //   'frustration': [integer 1-10], dont know yet
-  // }
-
 }
+
+function resetFrom(){
+    // $('#explorable_loss').html();
+    $('#explorable_loss').html(lossAversionExample);
+    $('#name').val('');
+    $('#course-name').val('');
+    $('#rating').val('');
+    $('#submit').click(check);
+    $('.over-it').click(ended);
+    $('#done').click(submit);
+}
+
+
+};

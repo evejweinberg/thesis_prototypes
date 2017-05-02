@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
 html {
@@ -55,6 +54,9 @@ h2 {
   pointer-events: none; }
 
 @media (min-width: 320px) {
+  .book {
+    height: 220px; }
+
   .fear-counter {
     left: 50%;
     transform: translateX(-50%) scale(0.3);
@@ -66,8 +68,8 @@ h2 {
     font-size: 2.3em; }
 
   .animatedDiv {
-    top: 0px;
-    left: -8%;
+    top: 60px;
+    left: 7%;
     transform: scale(0.32) translateX(0%); }
 
   .box-section {
@@ -89,6 +91,9 @@ h2 {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .book {
+    height: 220px; }
+
   .fear-counter {
     left: 50%;
     transform: translateX(-50%) scale(0.4);
@@ -122,6 +127,9 @@ h2 {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .book {
+    height: 220px; }
+
   .fear-counter {
     left: 50%;
     transform: translateX(-50%) scale(0.5);
@@ -155,6 +163,9 @@ h2 {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); } }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .book {
+    height: 280px; }
+
   .fear-counter {
     left: 50%;
     transform: translateX(-50%) scale(0.6);
@@ -189,6 +200,9 @@ h2 {
     margin-bottom: 150px; } }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
+  .book {
+    height: 280px; }
+
   .fear-counter {
     left: 50%;
     transform: translateX(-50%) scale(0.7);

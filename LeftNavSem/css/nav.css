@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
 html {
@@ -137,8 +136,13 @@ h2 {
   width: 28px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px; }
+  bottom: 30px;
+  animation: ebbing .6s infinite alternate-reverse; }
 
+@keyframes ebbing {
+  to {
+    width: 34px;
+    height: 34px; } }
 #heroBack {
   flex: 1;
   top: 50%;

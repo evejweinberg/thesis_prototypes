@@ -1,9 +1,11 @@
 var cols = ['#00FBD0', '#3FA9F5', '-webkit-linear-gradient(#FF404B, #FBB03B)','#FF404B', '#0000FF','#00FF00','#E56E9F','#F7F100','#FFB9ED','#FBB03B','-webkit-linear-gradient(#FBB03B, #E56E9F)',
 '-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0', '#22B573']
 
-var obj = {}
+var obj = {};
+
+
 function BuildScene(){
-var n = 0;
+
 
   allSections.forEach(section => {
     var this_section = document.createElement('div');
@@ -118,11 +120,12 @@ var n = 0;
     $(this_section).append(case_study);
     }
 
+    //not doing this anymore
     //add the whole thing to the page
-    $('#main').append(this_section);
-    // obj[section.id]=this_section
-  })
+    // $('#main').append(this_section);
 
+    obj[section.id]=this_section
+  })
 
 }
 
@@ -146,6 +149,8 @@ $('#main-site-intro').append(
 
 
 $('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
+$('.sources').append('<i class="chevron down icon big universal-hover" id="down-to-about" onclick="scrollTo(about)"></i>')
+
 
   var introplaying = false;
 
@@ -201,13 +206,14 @@ function BuildBoxes(){
   })
 
   $('.box-section').click(function(event){
+
+
     var replaceMe, findMe, findMeId;
     var clone = null;
     allSections.forEach(section => {
       if (section.title == $(this).text()){
         findMe = section.id;
         findMeId = "#"+findMe+"";
-        // console.log(findMeId)
         replaceMe = $('.flex-child-main').find(findMeId.toString());
         // clone = $(replaceMe).clone()
         if (findMe == 'dark') {
@@ -223,9 +229,15 @@ function BuildBoxes(){
     // console.log(replaceMe)
 
 
-// $('#heroContentHolder .heroCenter').html(obj[findMe]);
+    $('#heroContentHolder .heroCenter').html(obj[findMe]);
+
+    var functionToCall = "play"+findMe
+
+    addCase();
+    window[functionToCall]()
     // $('#heroContentHolder .heroCenter').html(clone);
-    $('#heroContentHolder .heroCenter').html(replaceMe);
+    //dont do this anymore
+    // $('#heroContentHolder .heroCenter').html(replaceMe);
 
   })
 
@@ -244,9 +256,10 @@ function BuildHeroDiv(){
 }
 
 
-
+//when each button gets called
 function checkInner(sectionId){
-  // console.log('checking '+ sectionId)
+
+  console.log('button clicked: checking '+ sectionId)
   if (sectionId == 'loss'){
     // console.log('LOSS');
       $('#explorable_loss').addClass('flip');
@@ -256,10 +269,18 @@ function checkInner(sectionId){
 
       if(AnimationOn == false){
         AnimationOn = true;
-        resetFrom();
+        $('#explorable_loss').html(lossAversionExample);
+        $('#name').val('');
+        $('#course-name').val('');
+        $('#rating').val('');
+
       } else {
         AnimationOn = false;
-        resetFrom();
+        $('#explorable_loss').html(lossAversionExample);
+        $('#name').val('');
+        $('#course-name').val('');
+        $('#rating').val('');
+
       }
     };
 

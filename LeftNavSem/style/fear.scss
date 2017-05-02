@@ -15,7 +15,14 @@
 // Variables
 $lato: 'Lato';
 
-
+#fear-get-code{
+  margin-top: 35px;
+  text-align: center;
+  text-decoration: underline;
+  color: grey;
+  opacity: 1;
+  z-index: 500;
+}
 
 // Countdown
 .countdown {
@@ -40,6 +47,8 @@ $lato: 'Lato';
     color: #1a1a1a;
     text-transform: uppercase;
   }
+
+
 
   .figure {
     position: relative;

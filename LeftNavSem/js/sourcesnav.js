@@ -13,7 +13,37 @@ $(sourceTitleP).text('Sources')
 $(sourcesDiv).append(sourceTitleP);
 $('.sources .header').append(sourcesDiv);
 
+var aboutDiv = document.createElement('div');
+$(aboutDiv).addClass('title-div');
+var aboutTitleP = document.createElement('p');
+$(aboutTitleP).addClass('title');
+$(aboutTitleP).text('About')
+$(aboutDiv).append(aboutTitleP);
+$('.about .header').append(aboutDiv);
+$('.about').append(about)
+$('.about').append('<i class="chevron up icon big universal-hover" id="up-to-start" onclick="backtoTop()"></i>')
 
+// $('.sources').append('<i class="chevron left icon big universal-hover" id="sources-left" onclick="moveBooksLeft()"></i>')
+// $('.sources').append('<i class="chevron right icon big universal-hover" id="sources-right" onclick="moveBooksRight()"></i>')
+//
+// function moveBooksLeft(){
+//   console.log(this)
+//   recenterBooks(book)
+// }
+//
+// function moveBooksRight(){
+//   console.log('moving right')
+//   //which book is centered?
+//   var centerTemp = document.querySelector('.flex-item-4')
+//   console.log(centerTemp)
+//   var RightofCenterTemp = document.querySelectorAll('.flex-item-2')
+//   console.log(RightofCenterTemp[RightofCenterTemp.length-1])
+//   //if it's not the most left book,
+//   if (RightofCenterTemp.length>1){
+//     //call this funcion with that book
+//     // $(RightofCenterTemp[RightofCenterTemp.length-1]).click(recenterBooks);
+//     }
+// }
 
 allBooks.forEach(function(e, num){
   var center = Math.round(allBooks.length/2)
@@ -25,6 +55,10 @@ allBooks.forEach(function(e, num){
   var book_deets = document.createElement('div');
   var book_title = document.createElement('p');
   $(book_title).addClass('book-title')
+  $(book_title).click(function(){
+    event.stopPropagation()
+    // console.log(this)
+  })
   $(book_3D).addClass('book-3D')
 
   $(book_title).html(e.type+': '+e.title)
@@ -46,8 +80,7 @@ allBooks.forEach(function(e, num){
     $(book).children('.book-3D').css({
       'transform': 'rotateY(0deg) scale(1)'
     })
-    // $(book).find('.spine').remove();
-    // $(book).find('.spine').attr('class', 'spine');
+
 
 
 
@@ -90,6 +123,7 @@ $('.book').click(recenterBooks)
 
 
 function recenterBooks(book){
+  console.log(book)
 
   // look through all books
   $('.book').each(function(e){

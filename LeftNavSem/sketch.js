@@ -1,5 +1,6 @@
 // $(function() {
 var section = 1;
+var caseAdded = false;
 $('.nav-all').css('left','-130px');
 $('#nav-opener').css('opacity','1');
 
@@ -7,14 +8,11 @@ $('#nav-opener').css('opacity','1');
 function openNav(){
   $('.nav-all').css('left','0px');
   $('#nav-opener').css('opacity','0');
-}
+};
 
 function start(){
-
   scrollTo(definition)
-  // scrollTo(boxesHolder)
-
-}
+};
 
 //build everything
 BuildIntro();
@@ -24,20 +22,40 @@ BuildScene();
 // addExtras();
 createRandomBoxes();
 HeroArrows();
+addCase();
 
-
-
-function scrollTo(thing){
+function backtoTop(){
   $('html, body').animate({
-            scrollTop: $(thing).offset().top -30+ 'px'
+            scrollTop: $('.title-holder').offset().top -30+ 'px'
         }, 1000);
     return true;
 }
+
+function scrollTo(thing){
+  if (thing == definition){
+    $('html, body').animate({
+              scrollTop: $(thing).offset().top - window.innerHeight/5+ 'px'
+          }, 1000);
+      return true;
+  } else if (thing == about) {
+  $('html, body').animate({
+            scrollTop: $('#about').offset().top -30+ 'px'
+        }, 1000);
+    return true;
+  }  else {
+    $('html, body').animate({
+              scrollTop: $(thing).offset().top -30+ 'px'
+          }, 1000);
+      return true;
+
+  }
+};
 
 
 $(".nav-all .link").click(function(evt){
    test.bind($(this))();
 });
+
 function test(){
    var $this = $(this);
   //  console.log($this)
@@ -112,54 +130,46 @@ function preventDefaultForScrollKeys(e) {
     }
 }
 
-function disableScroll() {
-
-  if (window.scrollY < 300){
-    // console.log('less')
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
-    }
-}
-
-function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null;
-    window.onwheel = null;
-    window.ontouchmove = null;
-    document.onkeydown = null;
-}
-
-
-// $(document).ready(
-//   function(){
-//     if (window.scrollY < 300){
-//       // console.log(window.scrollY, window.innerHeight, 'disableScroll')
-//       // disableScroll();
+// function disableScroll() {
+//
+//   if (window.scrollY < 300){
+//     // console.log('less')
+//   if (window.addEventListener) // older FF
+//       window.addEventListener('DOMMouseScroll', preventDefault, false);
+//   window.onwheel = preventDefault; // modern standard
+//   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+//   window.ontouchmove  = preventDefault; // mobile
+//   document.onkeydown  = preventDefaultForScrollKeys;
 //     }
-// })
+// }
+//
+// function enableScroll() {
+//     if (window.removeEventListener)
+//         window.removeEventListener('DOMMouseScroll', preventDefault, false);
+//     window.onmousewheel = document.onmousewheel = null;
+//     window.onwheel = null;
+//     window.ontouchmove = null;
+//     document.onkeydown = null;
+// }
 
 
-//animation when case study is clicked
-$('.case-study-open').click(function(){
-  if ($(this.parentNode.parentNode).hasClass('CSO')){
-    $(this.parentNode.parentNode).css({'width':'20vw'});
-    $(this.parentNode.parentNode).css({'overflow':'hidden'});
-    $(this).find('i').attr('class','arrow right icon');
-    $(this.parentNode.parentNode).removeClass('CSO');
-    $(this.parentNode).find('.case-study-after').css('opacity', '0');
+function addCase(){
+  //animation when case study is clicked
+  $('.case-study-open').click(function(){
+    if ($(this.parentNode.parentNode).hasClass('CSO')){
+      $(this.parentNode.parentNode).css({'width':'20vw'});
+      $(this.parentNode.parentNode).css({'overflow':'hidden'});
+      $(this).find('i').attr('class','arrow right icon');
+      $(this.parentNode.parentNode).removeClass('CSO');
+      $(this.parentNode).find('.case-study-after').css('opacity', '0');
+    } else {
+      $(this.parentNode.parentNode).css({'width':'70vw'});
+      $(this.parentNode.parentNode).css({'overflow':'scroll'});
+      $(this).find('i').attr('class','arrow left icon')
+      $(this.parentNode.parentNode).addClass('CSO');
+      $(this.parentNode).find('.case-study-after').css('opacity', '1');
+    }
 
-  } else {
-    $(this.parentNode.parentNode).css({'width':'70vw'});
-    $(this.parentNode.parentNode).css({'overflow':'scroll'});
-    $(this).find('i').attr('class','arrow left icon')
-    $(this.parentNode.parentNode).addClass('CSO');
-    $(this.parentNode).find('.case-study-after').css('opacity', '1');
-
-  }
-
-})
+  })
+    caseAdded = true;
+};

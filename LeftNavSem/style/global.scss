@@ -15,6 +15,18 @@ p {
   font-size: $font-size-p;
 }
 
+#brain-video{
+  position: absolute;
+z-index: -20;
+width: 95vw;
+left: 50%;
+margin-top: 25px;
+opacity: 0.3;
+transform: translateX(-50%);
+}
+
+
+
 
 #hope-after{
     position: absolute;
@@ -22,6 +34,10 @@ p {
     /*top: 40vh;*/
     width: 49vw;
 /*     border: 2px red solid; */
+  }
+
+  #down-to-about{
+    margin-top: 30px;
   }
 
 
@@ -149,13 +165,21 @@ from { background-position:    0px; }
 }
 
 .definition{
-  // width: 70%;
-  // left: 50%;
-  // transform: translateX(-50%);
   position: relative;
   margin: 0px 27vw;
   margin-bottom: 200px;
   font-size: $med-sm-font;
+}
+
+.about{
+  height: 900px;
+}
+
+.about > p{
+  position: relative;
+  margin: 0px 17vw;
+  margin-bottom: 40px;
+  font-size: $font-size-p;
 }
 
 // $lrg-font: 3em;

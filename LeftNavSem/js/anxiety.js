@@ -1,6 +1,6 @@
-function playAnxiety(){
-
-var anxietyHTML =
+function playanxiety(){
+  console.log("play anxiety")
+  var anxietyHTML =
 '<div class="anxiety-title"> CHANCE OF WINNING US PRESIDENCY:<span class="output">30</span>%<p id="presidency-sm">(recieves input every 2 seconds)</p></div>'+
 
 '<div class="anxiety-flex">'+

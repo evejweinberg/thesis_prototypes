@@ -1,3 +1,7 @@
+function playfear(){
+
+  // $('#explorable_fear img').css('width', '70%');
+
 var t = $('#explorable_fear')[0].parentElement
 $(t).find('.explorable').css({'border': '0px red solid'})
 
@@ -82,6 +86,7 @@ var fearAnimatedCountdown =
         $(FearCounter).addClass('fear-counter');
         $(FearCounter).append(fearAnimatedCountdown);
         $('#explorable_fear').append(FearCounter);
+        $('#explorable_fear').append('<a id="fear-get-code" href="http://codepen.io/doriancami/pen/jEJvaV" target="_blank">GET CODE</a>')
 
 
 
@@ -231,3 +236,6 @@ var Countdown = {
 
 // Let's go !
 Countdown.init();
+
+
+};

@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
 html {
@@ -60,6 +59,14 @@ h2 {
     right: 0;
     margin: auto; */
   /*   height: 310px; */ }
+
+#fear-get-code {
+  margin-top: 35px;
+  text-align: center;
+  text-decoration: underline;
+  color: grey;
+  opacity: 1;
+  z-index: 500; }
 
 .countdown {
   width: 720px;

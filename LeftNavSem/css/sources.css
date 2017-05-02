@@ -104,6 +104,20 @@
   right: 33px;
   top: 2px; }
 
+#sources-right{
+  display: block;
+   float: right;
+   top: -158px;
+   position: relative;
 
+  }
+
+  #sources-left{
+    display: block;
+     float: left;
+     top: -158px;
+     position: relative;
+
+    }
 
 /*# sourceMappingURL=sources.css.map */

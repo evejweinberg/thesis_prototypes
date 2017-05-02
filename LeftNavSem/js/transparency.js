@@ -1,3 +1,5 @@
+function playtransparency(){
+
 var t = $('#explorable_transparency')[0].parentElement
 // $(t).find('.explorable').css({'border': '0px red solid'})
 
@@ -16,12 +18,12 @@ $('#transparency .case-study .case-study-after').append('<a href="https://vimeo.
 
 
 //create a new div
-var explorable_meta = document.createElement('div');
-//add class to it
-$(explorable_meta).addClass('explorable_meta_closed exmet');
-//get element and insert this div
-var child = document.getElementById('transparency');
-child.parentNode.insertBefore(explorable_meta,child);
+// var explorable_meta = document.createElement('div');
+// //add class to it
+// $(explorable_meta).addClass('explorable_meta_closed exmet');
+// //get element and insert this div
+// var child = document.getElementById('transparency');
+// child.parentNode.insertBefore(explorable_meta,child);
 
 
-// http://codepen.io/evejweinberg/live/qrwKYR
+};

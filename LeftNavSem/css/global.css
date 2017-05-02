@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  font-family: "Helvetica";
   /*   transition: all .4s ease-in-out; */ }
 
 html {
@@ -63,12 +62,24 @@ body {
 p {
   font-size: 1.1em; }
 
+#brain-video {
+  position: absolute;
+  z-index: -20;
+  width: 95vw;
+  left: 50%;
+  margin-top: 25px;
+  opacity: 0.3;
+  transform: translateX(-50%); }
+
 #hope-after {
   position: absolute;
   /*left: 70px;*/
   /*top: 40vh;*/
   width: 49vw;
   /*     border: 2px red solid; */ }
+
+#down-to-about {
+  margin-top: 30px; }
 
 .placeholder-image {
   width: 100%;
@@ -170,5 +181,14 @@ p {
   margin: 0px 27vw;
   margin-bottom: 200px;
   font-size: 1.7em; }
+
+.about {
+  height: 900px; }
+
+.about > p {
+  position: relative;
+  margin: 0px 17vw;
+  margin-bottom: 40px;
+  font-size: 1.1em; }
 
 /*# sourceMappingURL=global.css.map */

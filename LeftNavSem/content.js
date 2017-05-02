@@ -70,7 +70,7 @@ var allSections = [
 'something': 'temp',
 "Intro": '<p>Just as in the real world, users remember negative experiences more than positive - even when they are of equal weight. Avoid the pitfalls of bad <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">heuristics </a>and turn a possible loss into a gain. These can be moments to humanize your product and express your brand.',
 'rwe_title':'Stripe Credit Card Payment',
-'rwe_body': '<p>This example comes from <a href="https://medium.com/bridge-collection/improve-the-payment-experience-with-animations-3d1b0a9b810e">an article </a> written by Michaël Villar of Stripe. Although I have not been able to get quantitative results, the article has an intersting case study.</p>'
+'rwe_body': '<p>This example comes from <a href="https://medium.com/bridge-collection/improve-the-payment-experience-with-animations-3d1b0a9b810e">an article </a> written by Michaël Villar of Stripe. Although I have not been able to get quantitative results, the article has an interesting case study.</p>'
 
 },
 
@@ -119,42 +119,12 @@ var allSections = [
 'category': 'explorable',
 'gif': 'img/box_explorable.gif',
 'something': 'temp',
-"Intro": "This whole site utilizes a learning method called 'Explorable Explanations'. Users learn faster and more deeply when you let them play, seeing the effects of their changes. Play with this meta-explorable, teaching you the 6 layers of education.",
+"Intro": "This whole site utilizes a learning method called 'Explorable Explanations'. Users learn faster and more deeply when you let them play, seeing the effects of their changes. ‘Explorable Explanations’ makes the abstract concrete, and allows the reader to develop their own intuition for how a system works. Play with this meta-explorable, teaching you the 6 layers of education.",
 'rwe_title':'More Info and Examples',
-'rwe_body': '<p>Explorables are popping up everywhere. <a href="http://nyti.ms/2oOzwmM" target="_blank">The New York Times</a> used them to explain Uber driver psychology. <a href="http://explorableexplanations.com/" target="_blank">This entire website</a> lists many and also explains how you can make your own. Play with them and you can be the judge of how comprehension and retention is affected. A few more of my favorite examples are: <a href="http://bit.ly/2oeO555" target="_blank">Seeing Theory</a>, a simple one: <a href="http://hereistoday.com/" target="_blank">Here Is Today</a>, and <a href="https://pudding.cool/" target="_blank">Anything by The Pudding</a>. Oh, <a href="http://setosa.io/#/" target="_blank">one more gold mine!</a></p>'
+'rwe_body': '<p>Explorables are popping up everywhere. <a href="http://nyti.ms/2oOzwmM" target="_blank">The New York Times</a> used them to explain Uber driver psychology. <a href="http://explorableexplanations.com/" target="_blank">ExplorableExplanations.com</a> lists many examples and also explains how you can make your own. Play with them and you can be the judge of how comprehension and retention is affected. A few more of my favorite examples are: <a href="http://bit.ly/2oeO555" target="_blank">Seeing Theory</a>, a simple one: <a href="http://hereistoday.com/" target="_blank">Here Is Today</a>, and <a href="https://pudding.cool/" target="_blank">Anything by The Pudding</a>. Oh, <a href="http://setosa.io/#/" target="_blank">one more gold mine!</a></p>'
 
 },
 
-// {
-// "title": "Motivation",
-// 'id': 'motivation',
-// 'category': 'fogg',
-// 'something': 'temp',
-// "Intro": 'Does your user know their motivation for executing their desired behavior? Motivation, if not already present, can be created with education, and strengthened with emotion.',
-// 'rwe_title':'Kickstarter',
-// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
-//
-// },
-// {
-// "title": "Ability",
-// 'id': 'ability',
-// 'category': 'fogg',
-// 'something': 'temp',
-// "Intro": 'Is your user aware that they have the specific ability that is required? First define which categories apply to your situation:',
-// 'rwe_title':'Kickstarter',
-// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
-//
-// },
-// {
-// "title": "Trigger",
-// 'id': 'trigger',
-// 'category': 'fogg',
-// 'something': 'temp',
-// "Intro": 'TRIGGERS can cause us to act on impulse. If a user knows their motivation and ability, this is the time to trigger! Triggers can come in different forms: A extra emotional nudge, a reminder, or a facilitator.',
-// 'rwe_title':'Kickstarter',
-// 'rwe_body': 'Interview needed here, ideally from Teddy Goff, the person who led the digital strategy team that helped get President Obama elected twice by connecting the people to the politician—online. His team was responsible for President Obama’s massive online presence and now a handful of campaign alumni lead a consulting firm that seeks to do the same for others.'
-//
-// },
 {
 "title": "Flow",
 'id': 'chunking',
@@ -163,9 +133,9 @@ var allSections = [
 'buttonA': 'Add Flow',
 'buttonB': 'Remove Flow',
 'something': 'temp',
-"Intro": 'Animation can help the user "Flow" quickly through your experience! Tactics to implement are CHUNKING, REDUCTION, TUNNELING, making STEP-PROGRESS, and FOOT-IN-THE-DOOR ordering. These techniques not only reduces cognitive load, but users are more likely to complete things if they know how close to the end they area.',
-'rwe_title':'More Info',
-'rwe_body': 'Nothing yet.'
+"Intro": 'Animation can help the user "Flow" quickly through your experience. Tactics to implement are CHUNKING, REDUCTION, TUNNELING, making STEP-PROGRESS, and FOOT-IN-THE-DOOR ordering. These techniques not only reduces cognitive load, but users are more likely to complete things if they know how close to the end they area.',
+// 'rwe_title':'More Info',
+// 'rwe_body': 'Nothing yet.'
 
 }
 
@@ -174,3 +144,5 @@ var allSections = [
 
 
 ]
+
+var about = "<p>This website was created by Eve Weinberg in the Spring of 2017 for her Master's Thesis at NYU's ITP program. All research, writing, code, animation, and design was done by Eve Weinberg in the span of 3 months. The website was created in vanilla javascript, html, and scss. Eve is a motion graphics director and UX designer. You can check out her UX work <a href='http://work.evejweinberg.com/' target='_blank' style='text-decoration: underline;'>here</a>. In her free time she is constantly drawing (check it out <a href='http://evejweinberg.com/' target='_blank' style='text-decoration: underline;'>here</a>), and enjoys making browser-based javascript tools for artists, for sillyness, or for activists. Check out her experiments <a href='http://itp.evejweinberg.com/a/' target='_blank' style='text-decoration: underline;'>here</a> <br> Get in touch! <a href='mailto:eve@neveroddoreven.tv?Subject=Hello%20Eve'>eve@neveroddoreven.tv</a>"

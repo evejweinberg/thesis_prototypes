@@ -128,7 +128,7 @@
   text-align: center;
   text-decoration: underline;
   color: grey;
-  opacity: 0;
+  opacity: 1;
   z-index: 500; }
 
 .over-it:hover {

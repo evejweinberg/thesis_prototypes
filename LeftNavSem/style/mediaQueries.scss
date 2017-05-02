@@ -9,6 +9,10 @@
 
 @media (min-width:320px) {
 
+  .book{
+    height: 220px;
+  }
+
 .fear-counter {
     left:50%;
     transform: translateX(-50%) scale(.3);
@@ -21,9 +25,9 @@
   #and-motion{
   font-size: 2.3em;
   }
-     .animatedDiv{
-    top: 0px;
-    left: -8%;
+    .animatedDiv{
+    top: 60px;
+    left: 7%;
     transform: scale(.32) translateX(0%);
   }
 
@@ -50,6 +54,9 @@
 @media (min-width:481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
 
+  .book{
+    height: 220px;
+  }
   .fear-counter {
       left:50%;
       transform: translateX(-50%) scale(.4);
@@ -89,7 +96,9 @@
 }
 @media (min-width:641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-
+  .book{
+    height: 220px;
+  }
   .fear-counter {
       left:50%;
       transform: translateX(-50%) scale(.5);
@@ -133,6 +142,10 @@
 @media (min-width:961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 
+  .book{
+    height: 280px;
+  }
+
   .fear-counter {
       left:50%;
       transform: translateX(-50%) scale(.6);
@@ -174,6 +187,9 @@
 @media (min-width:1025px) {
   /* big landscape tablets, laptops, and desktops */
 
+.book{
+  height: 280px;
+}
   .fear-counter {
       left:50%;
       transform: translateX(-50%) scale(.7);
