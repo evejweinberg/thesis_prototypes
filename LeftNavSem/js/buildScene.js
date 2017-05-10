@@ -235,9 +235,6 @@ function BuildBoxes(){
 
     addCase();
     window[functionToCall]()
-    // $('#heroContentHolder .heroCenter').html(clone);
-    //dont do this anymore
-    // $('#heroContentHolder .heroCenter').html(replaceMe);
 
   })
 
@@ -271,6 +268,14 @@ function fillHeroNext(){
 
       var u = allSections[count].id
 
+      if (u == 'dark') {
+        $('body').css({	"filter": "invert(100%)"})
+        $('body').css({	"background": "black"})
+        } else {
+        $('body').css({	"filter": "invert(0%)"})
+        $('body').css({	"background": "white"})
+        }
+
       $('#heroContentHolder .heroCenter').html(obj[u]);
       var functionToCall = "play"+u
       addCase();
@@ -293,6 +298,14 @@ function fillHeroPrev(){
       }
 
       var u = allSections[count].id
+
+      if (u == 'dark') {
+        $('body').css({	"filter": "invert(100%)"})
+        $('body').css({	"background": "black"})
+        } else {
+        $('body').css({	"filter": "invert(0%)"})
+        $('body').css({	"background": "white"})
+        }
 
       $('#heroContentHolder .heroCenter').html(obj[u]);
       var functionToCall = "play"+u

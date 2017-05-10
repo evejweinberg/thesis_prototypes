@@ -12,7 +12,7 @@ var allSections = [
   'category': 'principle',
   'gif': 'img/box_ethics.gif',
   'something': 'temp',
-  "Intro": "<p>Ethics is the backbone of this entire website. As we as designers and developers are busy creating robust user experiences, meeting client deadlines, and appeasing investors, we must always remember to keep ethics top of mind. Consider the golden rule below and always pause to ask yourself:<i> 'Is my work helping or hurting people?'</i>, and <i>'What side of the good vs evil line am I on?</i>'</p>",
+  "Intro": "<p>Ethics is the backbone of this entire website. We as designers and developers are constantly busy creating robust user experiences, meeting client deadlines, and appeasing investors, but we must remember to keep ethics top of mind. Consider the golden rule below and always pause to ask yourself:<i> 'Is my work helping or hurting people?'</i>, and <i>'What side of the good vs evil line am I on?</i>'</p>",
   'placeholderImage': "img/ethics_poster-04.jpg"
   // 'rwe_title':'Coming Soon!',
   // 'rwe_body': 'Coming Soon'
@@ -81,7 +81,7 @@ var allSections = [
 'buttonA': 'Use Loss Aversion',
 'buttonB': 'Back to default',
 'something': 'temp',
-"Intro": '<p>Just as in the real world, users remember negative experiences more than positive - even when they are of equal weight. Avoid the pitfalls of bad <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">heuristics </a>and turn a possible loss into a gain. These can be moments to humanize your product and express your brand.',
+"Intro": '<p>Just as in the real world, users remember negative experiences more than positive - even when they are of equal weight. Avoid the pitfalls of bad <a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">heuristics </a>and turn a possible loss into a gain. These can be moments to humanize your product and express your brand.',
 'rwe_title':'Stripe Credit Card Payment',
 'rwe_body': '<p>This example comes from <a href="https://medium.com/bridge-collection/improve-the-payment-experience-with-animations-3d1b0a9b810e">an article </a> written by Michaël Villar of Stripe. Although I have not been able to get quantitative results, the article has an interesting case study.</p>'
 
@@ -93,7 +93,7 @@ var allSections = [
 'gif': 'img/box_dark.gif',
 'category': 'psychology',
 'something': 'temp',
-"Intro": "<p>Dark Patterns are tricks used in websites and apps that make you buy or sign up for things that you didn't mean to. Dark Patterns are immoral and unethical. We will NOT be covering them here. Examples of dark patterns are <a href='https://darkpatterns.org/types-of-dark-pattern' target='_blank'>Bait and Switch, Disguised Ads, Forced Continuity, Hidden Costs, Seak Into Basket.</a> If you see a dark pattern on a website, please <a href=' ' target='_blank'>report it</a></p>",
+"Intro": "<p>Dark Patterns are tricks used in websites and apps that make you buy or sign up for things that you didn't mean to. Dark Patterns are immoral and unethical. We will NOT be covering them here. Examples of dark patterns are: <a href='https://darkpatterns.org/types-of-dark-pattern' target='_blank'>Bait and Switch, Disguised Ads, Forced Continuity, Hidden Costs, Sneak Into Basket.</a> <br> <br>If you see a dark pattern on a website, tweet the link to <a href='https://twitter.com/darkpatterns' target='_blank'>@darkpatterns</a> or use the hashtag #darkpattern.</p>",
 'rwe_title':'Lynda UX Course on Persuasive Ethics',
 'rwe_body': '<p><a href="">This Course</a> explains some of the dark patterns, what to look out for as a consumer, and what to avoid as a professional.</p>.'
 
@@ -120,7 +120,7 @@ var allSections = [
 'category': 'principle',
 'gif': 'img/box_bm.gif',
 'something': 'temp',
-"Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>"
+"Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='http://captology.stanford.edu/' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>"
 // 'rwe_title':'Coming Soon!',
 // 'rwe_body': 'Coming Soon'
 
