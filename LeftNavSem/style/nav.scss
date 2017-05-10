@@ -113,6 +113,11 @@ justify-content: center;
     animation: ebbing .6s infinite alternate-reverse;
   }
 
+  .ebb {
+    animation: ebbing .6s infinite alternate-reverse;
+
+  }
+
   @keyframes ebbing {
     to { width: 34px; height: 34px;}
   }

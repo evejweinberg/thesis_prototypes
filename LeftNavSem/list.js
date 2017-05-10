@@ -8,9 +8,32 @@ var allBooks = [
 'translate': 50
 },
 {
-'title': 'http://www.bjfogg.com/fbm_files/page4_1.pdf',
+'title': ' Using Computers to Change What We Think and Do ',
+'cover': 'img/src_stanford.png',
+'type': 'Persuasive Technology',
+'link': 'https://www.amazon.com/Persuasive-Technology-Computers-Interactive-Technologies/dp/1558606432/ref=sr_1_3?ie=UTF8&qid=1494357476&sr=8-3&keywords=persuasive+design+book'
+},
+{
+'title': 'Hooked: How to Build Habit-Forming Products',
 'cover': 'img/book1.jpg',
+'type': 'book',
+'link': 'https://www.amazon.com/Hooked-How-Build-Habit-Forming-Products/dp/1591847788/?tag=thekerne-20',
+'position': "b",
+'left': 50,
+'translate': 50
+},
+
+{
+'title': 'Ethics of Persuasive Design',
+'cover': 'img/src_lynda.png',
+'type': 'Video Course',
+'link': 'https://www.lynda.com/Web-User-Experience-tutorials/Persuasive-UX-Ethics-Persuasive-Design/155977-2.html'
+},
+{
+'title': 'A Behavior Model for Persuasive Design',
+'cover': 'img/src_bjfogg1.png',
 'type': 'White Paper',
+'link': 'http://www.bjfogg.com/fbm_files/page4_1.pdf',
 'position': "b",
 'left': 50,
 'translate': 50
@@ -47,8 +70,8 @@ var allBooks = [
 
 
 {
-  'title': ' Interactivity in multimedia learning: An integrated model’ by Jan L. Plass',
-'cover': 'https://images-na.ssl-images-amazon.com/images/I/51-hlKNdaDL._SX258_BO1,204,203,200_.jpg',
+'title': ' Interactivity in multimedia learning: An integrated model’ by Jan L. Plass',
+'cover': 'img/src_plass.png',
 'type': 'White Paper',
  'position': "c",
  'left': 50,

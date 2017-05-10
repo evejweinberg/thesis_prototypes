@@ -4,7 +4,7 @@ var lossAversionExample;
 
 
 function playloss(){
-  console.log('function loss called')
+  // console.log('function loss called')
 
 
 //variables to keep track of how many rounds of errors the user endures

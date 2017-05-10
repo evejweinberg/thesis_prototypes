@@ -5,17 +5,30 @@ var allSections = [
   "Intro": 'Hello! Welcome to this educational website all about CAPTOLOGY: the study of where psychology meets technology to persuade human behavior.',
 
   },
+
+  {
+  "title": "Ethics",
+  'id': 'ethics',
+  'category': 'principle',
+  'gif': 'img/box_ethics.gif',
+  'something': 'temp',
+  "Intro": "<p>Ethics is the backbone of this entire website. As we as designers and developers are busy creating robust user experiences, meeting client deadlines, and appeasing investors, we must always remember to keep ethics top of mind. Consider the golden rule below and always pause to ask yourself:<i> 'Is my work helping or hurting people?'</i>, and <i>'What side of the good vs evil line am I on?</i>'</p>",
+  'placeholderImage': "img/ethics_poster-04.jpg"
+  // 'rwe_title':'Coming Soon!',
+  // 'rwe_body': 'Coming Soon'
+
+  },
 {
 "title": "Hope",
 'id': 'hope',
 'gif': 'img/box_hope.gif',
 'category': 'emotion',
 'something': 'temp',
-'buttonA': 'Add Hope',
-'buttonB': 'Remove Hope',
+// 'buttonA': 'Add Hope',
+// 'buttonB': 'Remove Hope',
 "Intro": 'Hope is the strongest positive emotion you can conjure. Animation’s greatest strength is joy, surprise, and delight, so use it to animate the positive effects of a user’s behavior. Emphasize cause and effect. They will feel hope, feel more effective, and want to interact with your product more.',
 'rwe_title':'Kickstarter or Charity Water',
-'rwe_body': '<p>Looking into kickstarter data and charity water.<a href="https://upleaf.com/nonprofit-resources/online-fundraising/case-study-charity-water" target="_blank">Charity</a></p>'
+'rwe_body': '<p>Still looking into kickstarter data and charity water online examples, <a href="https://upleaf.com/nonprofit-resources/online-fundraising/case-study-charity-water" target="_blank">like this</a></p>'
 
 },
 
@@ -40,9 +53,9 @@ var allSections = [
 'placeholderImage': "img/fear-01.jpg",
 'buttonA': 'Add Scarcity',
 'buttonB': 'Remove Scarcity',
-"Intro": 'Fear is sadly the strongest emotion to cultivate in your user. SCARCITY is a fear tactic. This is often leveraged through scarcity of time and amount. Using a combination of animation + text is stronger than just text alone.',
+"Intro": 'Fear is sadly the strongest emotion to cultivate in your user. SCARCITY is a fear tactic. This is often leveraged through scarcity of time and amount. Using a combination of animation + text is stronger than just text alone. Always be accurate and honest if you are leveraging scarcity. Do not lie about how much time or product you have. This is a chance for your brand to gain or lose credibility.',
 'rwe_title':'Flight Searching',
-'rwe_body': "<p>Next time you're searching for flights online, be wary of the messaging that says '1 ticket left.' This has been tested, by myself and larger eithics organizations, and in most cases these are false claims, just trying to leverage fear through scarcity. Consumer Group Choice wrote about a study they conducted, <a href='http://www.news.com.au/travel/travel-advice/money/consumer-group-choice-report-say-airlines-five-seats-left-warnings-are-misleading-dubious/news-story/d524dcba17d9edda76f4501299947c5d' target='_blank'> read about it here</a>.</p>"
+'rwe_body': "<p>Next time you're searching for flights online, be wary of the messaging that says '1 ticket left.' This has been tested, by myself and larger ethics organizations, and in most cases these are false claims which attempt leverage fear through scarcity. Consumer Group Choice wrote about a study they conducted, <a href='http://www.news.com.au/travel/travel-advice/money/consumer-group-choice-report-say-airlines-five-seats-left-warnings-are-misleading-dubious/news-story/d524dcba17d9edda76f4501299947c5d' target='_blank'> read about it here</a>.</p>"
 
 },
 
@@ -55,7 +68,7 @@ var allSections = [
 'buttonB': 'Back to default',
 'category': 'psychology',
 'something': 'temp',
-"Intro": 'Show the work being done. Users will empathize with your product (and team!), and place greater value on your offering. In turn they will sit through longer load times and are more likely to complete desired behavior because of the relationship you have created.',
+"Intro": 'Show the work being done. Users will empathize with your product (and team!) more, placing greater value on your offering. In turn they will sit through longer load times and are more likely to complete desired behavior because of the relationship you have created. Considering this one engagement-level deeper than using a custom loading animation.',
 'rwe_title':'L2Inc Study',
 'rwe_body': 'SOLD Clinic 2015 - Michael Norton:'
 
@@ -104,7 +117,7 @@ var allSections = [
 {
 "title": "Fogg's Behavioral Model",
 'id': 'fogg',
-'category': 'fogg',
+'category': 'principle',
 'gif': 'img/box_bm.gif',
 'something': 'temp',
 "Intro": "<p>Do not waste your users’ attention span or developer dollars asking for anything unless it is the right time to ask. BJ Fogg, professor and founder of the <a href='' target='_blank'>Stanford Persuasive Technology Lab</a>, created this model which serves as a guideline for persuasive design. Three elements should exist to achieve your desired engagement: MOTIVATION, ABILITY, and the TRIGGER. Motivation and Ability may already be present in your user, you just have to check for it. The trigger comes from you.</p>"

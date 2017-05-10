@@ -50,21 +50,7 @@ h2 {
   position: relative;
   height: 20vh; }
 
-#hope-comng-soon {
-  color: #F48788;
-  width: 70%;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%); }
+#ethics-download {
+  color: #bebebe !important; }
 
-#spbuttonholder {
-  display: flex;
-  /*     border: 4px red solid; */ }
-
-#spbuttonholder > * {
-  flex: 1;
-  margin: 8px;
-  position: relative;
-  display: inline-block; }
-
-/*# sourceMappingURL=sp.css.map */
+/*# sourceMappingURL=ethics.css.map */

@@ -1,3 +1,5 @@
+@import "_shared_variables";
+
 #spbutton1{
 
 
@@ -16,6 +18,14 @@
 
 #spbutton4{
 
+}
+
+#hope-comng-soon{
+  color: $red-A;
+  width: 70%;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
 }
 
 #spbuttonholder{

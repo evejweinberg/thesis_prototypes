@@ -21,7 +21,7 @@ $(aboutTitleP).text('About')
 $(aboutDiv).append(aboutTitleP);
 $('.about .header').append(aboutDiv);
 $('.about').append(about)
-$('.about').append('<i class="chevron up icon big universal-hover" id="up-to-start" onclick="backtoTop()"></i>')
+$('.about').append('<i class="chevron up icon ebb big universal-hover" id="up-to-start" onclick="backtoTop()"></i>')
 
 // $('.sources').append('<i class="chevron left icon big universal-hover" id="sources-left" onclick="moveBooksLeft()"></i>')
 // $('.sources').append('<i class="chevron right icon big universal-hover" id="sources-right" onclick="moveBooksRight()"></i>')

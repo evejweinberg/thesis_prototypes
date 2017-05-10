@@ -86,5 +86,9 @@ function playhope(){
         }
 
 
+        $('#explorable_hope').html('<p id="hope-comng-soon">Example coming soon. In the meantime, if you enjoy the playful rollovers happening above, you can use <a href="https://evejweinberg.github.io/sparkleHover/index.html" target="_blank"> this jQuery plugin</a> to easily recreate and customize it.</p>')
+
+
+
 
 };

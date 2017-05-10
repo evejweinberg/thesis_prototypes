@@ -252,6 +252,54 @@ function BuildHeroDiv(){
   $('#heroContentHolder').append("<i class='arrow big left icon universal-hover' id='heroBack'></i>");
   $('#heroContentHolder').append(herocenter);
   $('#heroContentHolder').append("<i class='arrow big right icon universal-hover' id='heroForward'></i>");
+  $('#heroForward').click(fillHeroNext);
+  $('#heroBack').click(fillHeroPrev);
+
+}
+
+function fillHeroNext(){
+  //what is ther id in heroCOntent rifht now
+  var idofcurrentHero = $('.heroCenter div').attr('id')
+  //what is it's index
+  allSections.forEach(function(singleSection){
+    if (singleSection.id == idofcurrentHero){
+      var count = allSections.indexOf(singleSection) + 1;
+
+      if(count >= allSections.length){
+        count = 1
+      }
+
+      var u = allSections[count].id
+
+      $('#heroContentHolder .heroCenter').html(obj[u]);
+      var functionToCall = "play"+u
+      addCase();
+      window[functionToCall]()
+    }
+  })
+
+}
+
+function fillHeroPrev(){
+  //what is ther id in heroCOntent rifht now
+  var idofcurrentHero = $('.heroCenter div').attr('id')
+  //what is it's index
+  allSections.forEach(function(singleSection){
+    if (singleSection.id == idofcurrentHero){
+      var count = allSections.indexOf(singleSection) - 1;
+
+      if(count <= 0){
+        count = 11
+      }
+
+      var u = allSections[count].id
+
+      $('#heroContentHolder .heroCenter').html(obj[u]);
+      var functionToCall = "play"+u
+      addCase();
+      window[functionToCall]()
+    }
+  })
 
 }
 
@@ -259,7 +307,7 @@ function BuildHeroDiv(){
 //when each button gets called
 function checkInner(sectionId){
 
-  console.log('button clicked: checking '+ sectionId)
+  // console.log('button clicked: checking '+ sectionId)
   if (sectionId == 'loss'){
     // console.log('LOSS');
       $('#explorable_loss').addClass('flip');

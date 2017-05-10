@@ -21,11 +21,16 @@ function playsocial(){
 
 function playexplorableexplanations(){
 
-
+$('#explorable_explorableexplanations').html('');
   var htmlee = '<iframe style="width:100%; height:100%" src="http://codepen.io/evejweinberg/live/qrwKYR"></iframe>'
   var eeInner = '<p data-height="265" data-theme-id="0" data-slug-hash="qrwKYR" data-default-tab="css,result" data-user="evejweinberg" data-embed-version="2" data-pen-title="learning-levels" class="codepen">See the Pen <a href="http://codepen.io/evejweinberg/pen/qrwKYR/">learning-levels</a> by Eve Weinberg (<a href="http://codepen.io/evejweinberg">@evejweinberg</a>) on'+
   ' <a href="http://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>';
   $('#explorable_explorableexplanations').css('height','500px').append(htmlee);
 
+
+}
+
+
+function playdark(){
 
 }
