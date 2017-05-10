@@ -6,7 +6,6 @@ var obj = {};
 
 function BuildScene(){
 
-
   allSections.forEach(section => {
     var this_section = document.createElement('div');
     $(this_section).attr('id', section.id);
@@ -19,7 +18,6 @@ function BuildScene(){
     $(this_category).addClass('category');
     $(this_section).append(this_category);
     }
-
 
     var this_title_div = document.createElement('div');
     $(this_title_div).addClass('title-div');
@@ -37,11 +35,13 @@ function BuildScene(){
     $(this_section).append(this_intro);
     };
 
+    //if there is a button
     if (section.buttonA){
       var button = document.createElement('div');
       $(button).addClass('c-button button_'+ section.id)
       $(button).text(section.buttonA);
 
+      //if we're in the social section
       if (section.id == 'social'){
         var button2 = $(button).clone();
         var button3 = $(button).clone();
@@ -62,11 +62,15 @@ function BuildScene(){
         $(spbuttonHolder).append(button4);
         $(this_section).append(spbuttonHolder);
 
-
+      //otherwise, just add this click event
       } else {
 
+        console.log('adding click event')
+
         $(this_section).append(button);
+        //why does this only work the bery first time it loads
         $(button).click(function(){
+          console.log('button clicked: '+ section.id)
             if ($(button).text() == section.buttonA){
               $(button).text(section.buttonB);
               checkInner(section.id)
@@ -226,13 +230,9 @@ function BuildBoxes(){
       }
     })
     scrollTo(heroContentHolder)
-    // console.log(replaceMe)
-
 
     $('#heroContentHolder .heroCenter').html(obj[findMe]);
-
     var functionToCall = "play"+findMe
-
     addCase();
     window[functionToCall]()
 
@@ -279,7 +279,8 @@ function fillHeroNext(){
       $('#heroContentHolder .heroCenter').html(obj[u]);
       var functionToCall = "play"+u
       addCase();
-      window[functionToCall]()
+      window[functionToCall]();
+      remakeButtonEvent(u, allSections[count]);
     }
   })
 
@@ -296,8 +297,8 @@ function fillHeroPrev(){
       if(count <= 0){
         count = 11
       }
-
       var u = allSections[count].id
+
 
       if (u == 'dark') {
         $('body').css({	"filter": "invert(100%)"})
@@ -311,6 +312,8 @@ function fillHeroPrev(){
       var functionToCall = "play"+u
       addCase();
       window[functionToCall]()
+      remakeButtonEvent(u, allSections[count]);
+
     }
   })
 
@@ -417,10 +420,24 @@ function HeroArrows(){
   $('#heroBack').click(function(){
     var thisOne = $('.heroCenter > .section').attr('id')
     for (section in allSections){
-      // console.log(thisOne,section.id)
       if (section.id == thisOne){
-        // console.log(thisOne)
       }
     }
   })
 }
+
+
+function remakeButtonEvent(u, target){
+
+  var tempB = "#"+u+" .c-button"
+  $(tempB).click(function(){
+    console.log('button clicked in prev: '+ target.id)
+      if ($(tempB).text() == target.buttonA){
+        $(tempB).text(target.buttonB);
+        checkInner(target.id)
+      } else {
+        checkInner(target.id)
+        $(tempB).text(target.buttonA);
+      }
+    })
+ }

@@ -86,7 +86,14 @@ var fearAnimatedCountdown =
         $(FearCounter).addClass('fear-counter');
         $(FearCounter).append(fearAnimatedCountdown);
         $('#explorable_fear').append(FearCounter);
-        $('#explorable_fear').append('<a id="fear-get-code" href="http://codepen.io/doriancami/pen/jEJvaV" target="_blank">GET CODE</a>')
+        // $('#fear-get-code').html('')
+        if ($('#explorable_fear').find($('#fear-get-code')).length > 0){
+          console.log('has it')
+
+        } else {
+          $('#explorable_fear').append('<a id="fear-get-code" href="http://codepen.io/doriancami/pen/jEJvaV" target="_blank">GET CODE</a>')
+
+        }
 
 
 
