@@ -4,6 +4,10 @@ var lossAversionExample;
 
 
 function playloss(){
+
+  //start with it off
+  AnimationOn = false;
+  console.log('restarting loss and animation is '+ AnimationOn)
   // console.log('function loss called')
 
 
@@ -12,10 +16,6 @@ var Name_errorCount = false;
 var Course_errorCount = false;
 var Rating_errorCount = false;
 var errorRound = 0;
-
-//A-B testing the animation. 50/50 chance of it being ON or not
-
-// console.log('A/B testing: ' + AnimationOn);
 
 lossAversionExample =
   '<div id="form-test" class="loss-aversion-container"><div class="loss-aversion-box bottom-to-top">'+
@@ -48,12 +48,12 @@ lossAversionExample =
 
 
 
-// var t = $('#explorable_loss')[0].parentElement;
-//   $(t).find('.explorable').css({'border': '0px red solid'})
   $('#explorable_loss').html(lossAversionExample);
 
   //on 'submit' check for errors
   function check(){
+
+    // console.log('LS checking')
 
     var nameVal = $('#name').val();
     var nameArray = nameVal.split(' ');
@@ -63,10 +63,12 @@ lossAversionExample =
     //if the rating is not two digits....
     if (ratingVal.length<2){
         if (AnimationOn){
+          console.log('LA on')
           $('#rating').css({'border':'3px red solid'})
         }
           Rating_errorCount = true;
       } else {
+        console.log('LA off')
          $('#rating').css({'border':'0px red solid'})
       }
 

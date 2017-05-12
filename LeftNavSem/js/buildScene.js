@@ -65,12 +65,12 @@ function BuildScene(){
       //otherwise, just add this click event
       } else {
 
-        console.log('adding click event')
+        // console.log('adding click event')
 
         $(this_section).append(button);
         //why does this only work the bery first time it loads
         $(button).click(function(){
-          console.log('button clicked: '+ section.id)
+          // console.log('button clicked: '+ section.id)
             if ($(button).text() == section.buttonA){
               $(button).text(section.buttonB);
               checkInner(section.id)
@@ -124,9 +124,6 @@ function BuildScene(){
     $(this_section).append(case_study);
     }
 
-    //not doing this anymore
-    //add the whole thing to the page
-    // $('#main').append(this_section);
 
     obj[section.id]=this_section
   })
@@ -142,11 +139,11 @@ function BuildScene(){
 function BuildIntro(){
   var showVideo = false;
 
-if (showVideo){
-    $('#main-site-intro').append(
-    "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
-    "<i class='video play big outline icon' id='intro-play'></i>")
-  }
+// if (showVideo){
+//     $('#main-site-intro').append(
+//     "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
+//     "<i class='video play big outline icon' id='intro-play'></i>")
+//   }
 
 $('#main-site-intro').append(
   "<div id='intro-square' </div><p id='and-motion'>+ Motion Graphics</p>")
@@ -158,21 +155,21 @@ $('.sources').append('<i class="chevron down icon big universal-hover" id="down-
 
   var introplaying = false;
 
-  $('#intro-play').click(function(){
-    if (introplaying){
-      $(this).attr('class', "video play outline icon")
-      $('#intro-video')[0].pause();
-      //stop video
-      introplaying = false;
-    } else {
-      // console.log(this)
-      $('#intro-video')[0].play();
-      $(this).attr('class',"stop circle outline icon")
-      //stop video
-      introplaying = true;
-
-    }
-  })
+  // $('#intro-play').click(function(){
+  //   if (introplaying){
+  //     $(this).attr('class', "video play outline icon")
+  //     $('#intro-video')[0].pause();
+  //     //stop video
+  //     introplaying = false;
+  //   } else {
+  //     // console.log(this)
+  //     $('#intro-video')[0].play();
+  //     $(this).attr('class',"stop circle outline icon")
+  //     //stop video
+  //     introplaying = true;
+  //
+  //   }
+  // })
 
 
 
@@ -199,7 +196,6 @@ function BuildBoxes(){
     if (section.gif){
       var gif = document.createElement('img');
       $(gif).addClass('box-gif_'+ section.id)
-      // $(this_section).append(gif);
       $(this_section).css('background-image','url('+section.gif+')')
       $(this_section).css('background-size','cover')
 
@@ -209,14 +205,23 @@ function BuildBoxes(){
     $('#boxesHolder').append(this_section);
   })
 
+
   $('.box-section').click(function(event){
 
 
-    var replaceMe, findMe, findMeId;
+
+
+
+
+
+
+    var replaceMe, findMe, findMeId, tempIndex;
     var clone = null;
     allSections.forEach(section => {
       if (section.title == $(this).text()){
         findMe = section.id;
+        tempIndex = allSections.indexOf(section)
+
         findMeId = "#"+findMe+"";
         replaceMe = $('.flex-child-main').find(findMeId.toString());
         // clone = $(replaceMe).clone()
@@ -227,7 +232,14 @@ function BuildBoxes(){
           $('body').css({	"filter": "invert(0%)"})
           $('body').css({	"background": "white"})
           }
+
+          // if (findMe == 'loss'){
+          //     console.log('restarting from build boxes')
+          //     AnimationOn = false;
+          //   }
       }
+
+
     })
     scrollTo(heroContentHolder)
 
@@ -235,8 +247,12 @@ function BuildBoxes(){
     var functionToCall = "play"+findMe
     addCase();
     window[functionToCall]()
+    console.log('remaking button click event for  ', allSections[tempIndex])
 
-  })
+    remakeButtonEvent(findMe, allSections[tempIndex])
+
+
+  }) //click event add
 
 
 }
@@ -430,8 +446,20 @@ function HeroArrows(){
 function remakeButtonEvent(u, target){
 
   var tempB = "#"+u+" .c-button"
+  //start with the default button text
+  $(tempB).text(target.buttonA);
+  console.log('button should read ' + target.buttonA + ' button is : '+ tempB)
+
+  //add click event
   $(tempB).click(function(){
-    console.log('button clicked in prev: '+ target.id)
+    //if it was at the fatualt state
+    if ( $(tempB).text() == 'Use Loss Aversion'){
+      //change it
+      AnimationOn = false;
+    } else {
+      AnimationOn = true;
+    }
+
       if ($(tempB).text() == target.buttonA){
         $(tempB).text(target.buttonB);
         checkInner(target.id)
@@ -440,4 +468,5 @@ function remakeButtonEvent(u, target){
         $(tempB).text(target.buttonA);
       }
     })
+
  }
