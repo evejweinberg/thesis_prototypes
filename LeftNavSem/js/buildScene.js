@@ -2,8 +2,11 @@ var cols = ['#00FBD0', '#3FA9F5', '-webkit-linear-gradient(#FF404B, #FBB03B)','#
 '-webkit-linear-gradient(#00FBD0, #0000FF)','-webkit-linear-gradient(#FF404B, #0000FF)','-webkit-linear-gradient(#FF404B, #F7F100)','#00FBD0', '#22B573']
 
 var obj = {};
+var replaceMe, findMe, findMeId, tempIndex;
+var clone = null;
 
 
+//this gets called once on load and pushed into the json 'obj'
 function BuildScene(){
 
   allSections.forEach(section => {
@@ -69,16 +72,16 @@ function BuildScene(){
 
         $(this_section).append(button);
         //why does this only work the bery first time it loads
-        $(button).click(function(){
-          // console.log('button clicked: '+ section.id)
-            if ($(button).text() == section.buttonA){
-              $(button).text(section.buttonB);
-              checkInner(section.id)
-            } else {
-              checkInner(section.id)
-              $(button).text(section.buttonA);
-            }
-          })
+        // $(button).click(function(){
+        //   // console.log('button clicked: '+ section.id)
+        //     if ($(button).text() == section.buttonA){
+        //       $(button).text(section.buttonB);
+        //       checkInner(section.id)
+        //     } else {
+        //       checkInner(section.id)
+        //       $(button).text(section.buttonA);
+        //     }
+        //   })
 
       }
     }
@@ -129,7 +132,7 @@ function BuildScene(){
   })
 
 }
-
+//done building json, never getting called again
 
 
 
@@ -137,44 +140,17 @@ function BuildScene(){
 
 
 function BuildIntro(){
-  var showVideo = false;
 
-// if (showVideo){
-//     $('#main-site-intro').append(
-//     "<video id='intro-video' src='img/intro_v1.mp4'></video>"+
-//     "<i class='video play big outline icon' id='intro-play'></i>")
-//   }
-
-$('#main-site-intro').append(
-  "<div id='intro-square' </div><p id='and-motion'>+ Motion Graphics</p>")
+  $('#main-site-intro').append(
+    "<div id='intro-square' </div><p id='and-motion'>+ Motion Graphics</p>")
 
 
-$('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
-$('.sources').append('<i class="chevron down icon big universal-hover" id="down-to-about" onclick="scrollTo(about)"></i>')
-
-
-  var introplaying = false;
-
-  // $('#intro-play').click(function(){
-  //   if (introplaying){
-  //     $(this).attr('class', "video play outline icon")
-  //     $('#intro-video')[0].pause();
-  //     //stop video
-  //     introplaying = false;
-  //   } else {
-  //     // console.log(this)
-  //     $('#intro-video')[0].play();
-  //     $(this).attr('class',"stop circle outline icon")
-  //     //stop video
-  //     introplaying = true;
-  //
-  //   }
-  // })
-
-
+    $('#main-site-intro').append('<i class="chevron down icon big universal-hover" id="down-first" onclick="start()"></i>')
+    $('.sources').append('<i class="chevron down icon big universal-hover" id="down-to-about" onclick="scrollTo(about)"></i>')
 
 }
 
+//this gets called once on loading of site
 function BuildBoxes(){
 
   allSections.forEach(section => {
@@ -205,51 +181,44 @@ function BuildBoxes(){
     $('#boxesHolder').append(this_section);
   })
 
-
+  //create click event for each box
   $('.box-section').click(function(event){
-
-
-
-
-
-
-
-
-    var replaceMe, findMe, findMeId, tempIndex;
-    var clone = null;
+    //go through the entire json
     allSections.forEach(section => {
+      //if this was the one clicked
       if (section.title == $(this).text()){
+        //get it's id
         findMe = section.id;
+        //get it's index
         tempIndex = allSections.indexOf(section)
 
         findMeId = "#"+findMe+"";
         replaceMe = $('.flex-child-main').find(findMeId.toString());
-        // clone = $(replaceMe).clone()
+
+        //special case -- check to see if it's 'dark' or not
         if (findMe == 'dark') {
           $('body').css({	"filter": "invert(100%)"})
           $('body').css({	"background": "black"})
-        } else {
-          $('body').css({	"filter": "invert(0%)"})
-          $('body').css({	"background": "white"})
+          } else {
+            $('body').css({	"filter": "invert(0%)"})
+            $('body').css({	"background": "white"})
           }
 
-          // if (findMe == 'loss'){
-          //     console.log('restarting from build boxes')
-          //     AnimationOn = false;
-          //   }
+          //replace hero div with new content
+          $('#heroContentHolder .heroCenter').html(obj[findMe]);
+          var functionToCall = "play"+findMe
+          window[functionToCall]()
+          console.log('box clicked  ', allSections[tempIndex])
+
+          remakeButtonEvent(findMe, allSections[tempIndex])
+          addCase();
+
       }
 
 
     })
     scrollTo(heroContentHolder)
 
-    $('#heroContentHolder .heroCenter').html(obj[findMe]);
-    var functionToCall = "play"+findMe
-    addCase();
-    window[functionToCall]()
-    console.log('remaking button click event for  ', allSections[tempIndex])
-
-    remakeButtonEvent(findMe, allSections[tempIndex])
 
 
   }) //click event add
@@ -338,6 +307,7 @@ function fillHeroPrev(){
 
 //when each button gets called
 function checkInner(sectionId){
+  console.log('checking inner')
 
   // console.log('button clicked: checking '+ sectionId)
   if (sectionId == 'loss'){
@@ -448,22 +418,26 @@ function remakeButtonEvent(u, target){
   var tempB = "#"+u+" .c-button"
   //start with the default button text
   $(tempB).text(target.buttonA);
-  console.log('button should read ' + target.buttonA + ' button is : '+ tempB)
+  console.log('button should read ' + target.buttonA + ' Button is : '+ tempB)
+  console.log($(tempB).text())
+
 
   //add click event
   $(tempB).click(function(){
     //if it was at the fatualt state
-    if ( $(tempB).text() == 'Use Loss Aversion'){
+    if ($(tempB).text() == 'Use Loss Aversion'){
       //change it
       AnimationOn = false;
     } else {
       AnimationOn = true;
     }
-
+    console.log($(tempB).text() +"  "+ target.buttonA)
       if ($(tempB).text() == target.buttonA){
+        console.log('button was target A')
         $(tempB).text(target.buttonB);
         checkInner(target.id)
       } else {
+        console.log('button was target B')
         checkInner(target.id)
         $(tempB).text(target.buttonA);
       }
